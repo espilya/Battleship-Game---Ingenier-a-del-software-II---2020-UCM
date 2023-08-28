@@ -1,0 +1,2717 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_5PNDEL1cEeqCU9pJ6xA93A">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_5cX8YL1cEeqCU9pJ6xA93A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_5cppML1cEeqCU9pJ6xA93A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_5cq3UL1cEeqCU9pJ6xA93A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_5cyzIL1cEeqCU9pJ6xA93A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_5hSRkL1cEeqCU9pJ6xA93A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5TCaML1cEeqCU9pJ6xA93A" name="simulator">
+    <packagedElement xmi:type="uml:Package" xmi:id="_5TJu8L1cEeqCU9pJ6xA93A" name="controller">
+      <packagedElement xmi:type="uml:Class" xmi:id="_5TYYcL1cEeqCU9pJ6xA93A" name="GuestController">
+        <ownedComment xmi:id="_5ThiYL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * This controller is used for the Guest in a PvP game
+ */
+</body>
+        </ownedComment>
+        <generalization xmi:id="_5Z5QIL1cEeqCU9pJ6xA93A" general="_5UB4sL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5cdb8L1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5cdb8b1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_5creYL1cEeqCU9pJ6xA93A" name="connectToHost" visibility="private">
+          <ownedComment xmi:id="_5ct6oL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * As this is the Guest Controller it will need to connect to the hosts game. That is why this method is needed. The hostSocket is received and the needed actions are taken to make a connection between the Guest and the Host
+ * @param hostSocket
+ * @return connected
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5creYb1cEeqCU9pJ6xA93A" name="hostSocket">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5creYr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5cuhsL1cEeqCU9pJ6xA93A" name="onExitCommand" visibility="protected">
+          <ownedComment xmi:id="_5cwW4L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Exit command is called
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5c0BQL1cEeqCU9pJ6xA93A" name="onConnectCommand" visibility="protected">
+          <ownedComment xmi:id="_5c2dgL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Connect command is called
+ * @param data
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5c0BQb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5c3roL1cEeqCU9pJ6xA93A" name="onPlacementStartCommand" visibility="protected">
+          <ownedComment xmi:id="_5c5g0L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Changes the state of the p2pState to place
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5c3rob1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5c6H4L1cEeqCU9pJ6xA93A" name="onPlacementEndCommand" visibility="protected">
+          <ownedComment xmi:id="_5c79EL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the PlacementEnd command is called
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5c6H4b1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5c8kIL1cEeqCU9pJ6xA93A" name="onStartCommand" visibility="protected">
+          <ownedComment xmi:id="_5c-ZUL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Start command is called
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5c8kIb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5c_ncL1cEeqCU9pJ6xA93A" name="onYouWinCommand" visibility="protected">
+          <ownedComment xmi:id="_5dCDsL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the YouWin command is called
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5c_ncb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5dDR0L1cEeqCU9pJ6xA93A" name="onWaitCommand" visibility="protected">
+          <ownedComment xmi:id="_5dFuEL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Wait command is called
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5dG8ML1cEeqCU9pJ6xA93A" name="setPlacementAsFinished" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5TlMwL1cEeqCU9pJ6xA93A" name="HostController">
+        <ownedComment xmi:id="_5TpeML1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * Controller that is used for player who hosts the game in PvP mode.
+ */
+</body>
+        </ownedComment>
+        <generalization xmi:id="_5dJYcL1cEeqCU9pJ6xA93A" general="_5UB4sL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5dMbwL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5dRUQL1cEeqCU9pJ6xA93A" name="serverSocket" visibility="private" type="_5Zb9IL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5dWMwL1cEeqCU9pJ6xA93A" name="socketForSendDataToMainServer" visibility="private" type="_5ZavAb1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5dZ3IL1cEeqCU9pJ6xA93A" name="writerMainServer" visibility="private" type="_5ZaH8L1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5deIkL1cEeqCU9pJ6xA93A" name="mySocket" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5deIkb1cEeqCU9pJ6xA93A" value="12346"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5dhy8L1cEeqCU9pJ6xA93A" name="isGuestShipPlacementFinished" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_5djoIL1cEeqCU9pJ6xA93A" name="createServer" visibility="private"/>
+        <ownedOperation xmi:id="_5dmEYL1cEeqCU9pJ6xA93A" name="sendThisHostToMainServer" visibility="private">
+          <ownedComment xmi:id="_5dogoL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Send this host information to main server.
+ * @throws UnknownHostException
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5dpHsL1cEeqCU9pJ6xA93A" name="sendDeleteRequest" visibility="private"/>
+        <ownedOperation xmi:id="_5drj8L1cEeqCU9pJ6xA93A" name="acceptConnections" visibility="public">
+          <ownedComment xmi:id="_5dtZIL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Accept incoming guest connection. Update readerChannel and writerChannel. Send request to main server to remove this host from the hosts list.
+ * @throws JSONException
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5duAML1cEeqCU9pJ6xA93A" name="onExitCommand" visibility="protected">
+          <ownedComment xmi:id="_5dv1YL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Exit command is called
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5dwccL1cEeqCU9pJ6xA93A" name="onWinCommand" visibility="protected">
+          <ownedComment xmi:id="_5dyRoL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action needed when the onWin command is called
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5dyRob1cEeqCU9pJ6xA93A" name="setPlacementAsFinished" visibility="public"/>
+        <ownedOperation xmi:id="_5d0t4L1cEeqCU9pJ6xA93A" name="onConnectCommand" visibility="protected">
+          <ownedComment xmi:id="_5d18AL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Connect command is called
+ * @param data
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5d0t4b1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5d2jEL1cEeqCU9pJ6xA93A" name="onPlacementStartCommand" visibility="protected">
+          <ownedComment xmi:id="_5d4YQL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the PlacementStart command is called
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5d2jEb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5d4_UL1cEeqCU9pJ6xA93A" name="onPlacementEndCommand" visibility="protected">
+          <ownedComment xmi:id="_5d6NcL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the PlacementEnd command is called
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5d4_Ub1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5d60gL1cEeqCU9pJ6xA93A" name="onStartCommand" visibility="protected">
+          <ownedComment xmi:id="_5d8psL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Start command is called
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5d60gb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5d930L1cEeqCU9pJ6xA93A" name="onYouWinCommand" visibility="protected">
+          <ownedComment xmi:id="_5d_tAL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the YouWin command is called
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5d930b1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5d_tAb1cEeqCU9pJ6xA93A" name="onWaitCommand" visibility="protected">
+          <ownedComment xmi:id="_5eCwUL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Performs the action when the Wait command is called
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5Tu9wL1cEeqCU9pJ6xA93A" name="LocalController">
+        <ownedComment xmi:id="_5T1EYL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * This Controller is used for the PvE Game Mode
+ */
+</body>
+        </ownedComment>
+        <generalization xmi:id="_5eDXYL1cEeqCU9pJ6xA93A" general="_5T7LAL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5eJeAL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5eJeAb1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5eQLsL1cEeqCU9pJ6xA93A" name="computer" visibility="private" type="_5UzUwL1cEeqCU9pJ6xA93A" association="_5stecL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5eWSUL1cEeqCU9pJ6xA93A" name="botDifficulty" visibility="private" type="_5U-T4L1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5ecY8L1cEeqCU9pJ6xA93A" name="_outFile" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5ejGoL1cEeqCU9pJ6xA93A" name="playerWait" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5erCcL1cEeqCU9pJ6xA93A" name="turn" visibility="private">
+          <ownedComment xmi:id="_5etesL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Numero del turno
+ */
+</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5exJEL1cEeqCU9pJ6xA93A" name="saveTurn" visibility="private">
+          <ownedComment xmi:id="_5e1agL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * El turno donde hace el save
+ */
+</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_5e2ooL1cEeqCU9pJ6xA93A" name="init" visibility="private">
+          <ownedComment xmi:id="_5e5r8L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Will initiate the game with the needed information. It will create the 2 players that is the Player and the Computer as the game mode is PvE The Ships are also placed on each players board. The computer is always a random ships placement while the player can be random or placed manually. All this is decided in the GUI
+ * @param size
+ * @param botDif
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5e2oob1cEeqCU9pJ6xA93A" name="size" type="_5UsAAb1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5e2oor1cEeqCU9pJ6xA93A" name="botDif" type="_5U-T4L1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5e5r8b1cEeqCU9pJ6xA93A" name="reset" visibility="public">
+          <ownedComment xmi:id="_5e8IML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Will intitate the game again making it a fresh game
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5e9WUL1cEeqCU9pJ6xA93A" name="placeShip" visibility="public">
+          <ownedComment xmi:id="_5fBnwL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * This is a passing method that will call the placeShip method in Player Only needed for player as the Computer doesn't have a manual placement
+ * @param cellLocation
+ * @param ship
+ * @param horizzontal
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5e9WUb1cEeqCU9pJ6xA93A" name="cellLocation">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5e9WUr1cEeqCU9pJ6xA93A" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5e9WU71cEeqCU9pJ6xA93A"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5e9WVL1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5e9WVb1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fCO0L1cEeqCU9pJ6xA93A" name="fire" visibility="public">
+          <ownedComment xmi:id="_5fErEL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Used for player fire action.
+ * @param x          pos
+ * @param y          pos
+ * @param fireType   0 = normal shot , 1 = attack line, 2 = AoE shot
+ * @param horizontal
+ * @return GameResponse
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5fCO0b1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fCO0r1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fCO071cEeqCU9pJ6xA93A" name="fireType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fCO1L1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fCO1b1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fFSIL1cEeqCU9pJ6xA93A" name="autoFire" visibility="public">
+          <ownedComment xmi:id="_5fIVcL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Used for IA fire
+ * @return GameResponse :: The response of the fire
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5fFSIb1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fFSIr1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fFSI71cEeqCU9pJ6xA93A" name="fireType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fFSJL1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fFSJb1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fI8gL1cEeqCU9pJ6xA93A" name="setShield" visibility="public">
+          <ownedComment xmi:id="_5fLYwL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Used for setting the shield type.&lt;br> Por cuestiones de tiempo y poca urgencia de esta implementacion en el modo PvE se dejara su implementacion para un futuro.
+ * @param x          pos
+ * @param y          pos
+ * @param typeShield 0 = single cell, 1 = whole boat
+ * @return GameResponse response
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5fI8gb1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fI8gr1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fI8g71cEeqCU9pJ6xA93A" name="typeShield">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fL_0L1cEeqCU9pJ6xA93A" name="randomPlacement" visibility="public">
+          <ownedComment xmi:id="_5fPDIL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * A passing function that will call askRandomPlacement for the Player
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fPqML1cEeqCU9pJ6xA93A" name="undo" visibility="public">
+          <ownedComment xmi:id="_5fTUkL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * --- Memento interactions &amp; Others interactions ---
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fT7oL1cEeqCU9pJ6xA93A" name="report" visibility="public">
+          <ownedParameter xmi:id="_5fT7ob1cEeqCU9pJ6xA93A" name="return" type="_5ZckMr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fY0IL1cEeqCU9pJ6xA93A" name="saveForUndo" visibility="public"/>
+        <ownedOperation xmi:id="_5fcegL1cEeqCU9pJ6xA93A" name="loadForUndo" visibility="public"/>
+        <ownedOperation xmi:id="_5fgI4L1cEeqCU9pJ6xA93A" name="save" visibility="public">
+          <ownedParameter xmi:id="_5fgI4b1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fjzQL1cEeqCU9pJ6xA93A" name="load" visibility="public">
+          <ownedParameter xmi:id="_5fjzQb1cEeqCU9pJ6xA93A" name="file">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5fjzQr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fm2kL1cEeqCU9pJ6xA93A" name="getGameType" visibility="public">
+          <ownedComment xmi:id="_5fp54L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * @return the size
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5fm2kb1cEeqCU9pJ6xA93A" name="return" type="_5UsAAb1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fp54b1cEeqCU9pJ6xA93A" name="getShipsList" visibility="public">
+          <ownedComment xmi:id="_5fs9ML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * @return the shipList
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5fp54r1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fs9Mb1cEeqCU9pJ6xA93A" name="getPlayerBoard" visibility="public">
+          <ownedParameter xmi:id="_5fs9Mr1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fwAgL1cEeqCU9pJ6xA93A" name="getEnemyBoard" visibility="public">
+          <ownedParameter xmi:id="_5fwAgb1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5fycwL1cEeqCU9pJ6xA93A" name="exit" visibility="public">
+          <ownedComment xmi:id="_5f2HIL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Will set all classes to null
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5f2uML1cEeqCU9pJ6xA93A" name="setPlacementAsFinished" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_5T5V0L1cEeqCU9pJ6xA93A" name="GameResponse">
+        <ownedLiteral xmi:id="_5f5xgL1cEeqCU9pJ6xA93A" name="HIT"/>
+        <ownedLiteral xmi:id="_5f5xgb1cEeqCU9pJ6xA93A" name="MISS"/>
+        <ownedLiteral xmi:id="_5f5xgr1cEeqCU9pJ6xA93A" name="SUNK"/>
+        <ownedLiteral xmi:id="_5f5xg71cEeqCU9pJ6xA93A" name="WON"/>
+        <ownedLiteral xmi:id="_5f5xhL1cEeqCU9pJ6xA93A" name="INVALID"/>
+        <ownedLiteral xmi:id="_5f6YkL1cEeqCU9pJ6xA93A" name="SHIELD"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5T7LAL1cEeqCU9pJ6xA93A" name="Controller" isAbstract="true">
+        <ownedComment xmi:id="_5T-OUL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * This Controller class is abstract because we have a different controllers depending on the game mode. &lt;br> - For PvP we will use OnlineController as we will need to make use of server and P2P capabilities. &lt;br> - For PvE we will use LocalController as we don't need to make use of server and P2P capabilities and one of the players is Computer by default. &lt;br>
+ */
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_5f800L1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5gAfML1cEeqCU9pJ6xA93A" name="player" visibility="protected" type="_5U2YEL1cEeqCU9pJ6xA93A" association="_5suFgL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5gDigL1cEeqCU9pJ6xA93A" name="enemyPlayer" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5gGl0L1cEeqCU9pJ6xA93A" name="gameSize" visibility="protected" type="_5UsAAb1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5gJCEL1cEeqCU9pJ6xA93A" name="gameState" visibility="protected" type="_5T-OUb1cEeqCU9pJ6xA93A"/>
+        <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_5T-OUb1cEeqCU9pJ6xA93A" name="GameState">
+          <ownedLiteral xmi:id="_5gtCwL1cEeqCU9pJ6xA93A" name="PLAY"/>
+          <ownedLiteral xmi:id="_5gtp0L1cEeqCU9pJ6xA93A" name="WAIT_ATTACK"/>
+          <ownedLiteral xmi:id="_5gtp0b1cEeqCU9pJ6xA93A" name="WON"/>
+          <ownedLiteral xmi:id="_5gtp0r1cEeqCU9pJ6xA93A" name="LOSE"/>
+          <ownedLiteral xmi:id="_5gtp071cEeqCU9pJ6xA93A" name="PLACE"/>
+          <ownedLiteral xmi:id="_5gtp1L1cEeqCU9pJ6xA93A" name="WAIT_PLACE"/>
+          <ownedLiteral xmi:id="_5gtp1b1cEeqCU9pJ6xA93A" name="ENEMY_EXIT"/>
+          <ownedLiteral xmi:id="_5gtp1r1cEeqCU9pJ6xA93A" name="LOST_CONNECTION"/>
+        </nestedClassifier>
+        <ownedOperation xmi:id="_5gK3QL1cEeqCU9pJ6xA93A" name="placeShip" visibility="public" isAbstract="true">
+          <ownedComment xmi:id="_5gMFYL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Manage the placement of ship
+ * @param cellLocation x and y position of the first cell
+ * @param ship         The ship
+ * @param horizontal   True if horizontal
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5gK3Qb1cEeqCU9pJ6xA93A" name="cellLocation">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5gK3Qr1cEeqCU9pJ6xA93A" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5gK3Q71cEeqCU9pJ6xA93A"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gK3RL1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5gK3Rb1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gMscL1cEeqCU9pJ6xA93A" name="randomPlacement" visibility="public" isAbstract="true"/>
+        <ownedOperation xmi:id="_5gOhoL1cEeqCU9pJ6xA93A" name="fire" visibility="public" isAbstract="true">
+          <ownedComment xmi:id="_5gPvwL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * More description in implementation. At OnlineController and LocalController
+ * @param x          position
+ * @param y          position
+ * @param fireType   '0 = normal shot , 1 = attack line, 2 = AoE shot'
+ * @param horizontal true if horizontal
+ * @return GameResponse Response to Attack
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5gOhob1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gOhor1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gOho71cEeqCU9pJ6xA93A" name="fireType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gOhpL1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gOhpb1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gQW0L1cEeqCU9pJ6xA93A" name="autoFire" visibility="public" isAbstract="true">
+          <ownedComment xmi:id="_5gSMAL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * More description in implementation. At OnlineController and LocalController
+ * @param x          position
+ * @param y          position
+ * @param fireType   '0 = normal shot , 1 = attack line, 2 = AoE shot'
+ * @param horizontal true if horizontal
+ * @return GameResponse Response to Attack
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5gQW0b1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gQW0r1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gQW071cEeqCU9pJ6xA93A" name="fireType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gQW1L1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gQW1b1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gSzEL1cEeqCU9pJ6xA93A" name="setShield" visibility="public">
+          <ownedComment xmi:id="_5gUoQL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * If player have enough points, we set shield at x,y ship or cell setShield ship = 8 setShield cell = 5
+ * @param x          position
+ * @param y          position
+ * @param typeShield shield type: (0 == ship shield, 1 == cell shield )
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5gSzEb1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gSzEr1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gSzE71cEeqCU9pJ6xA93A" name="typeShield">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gVPUL1cEeqCU9pJ6xA93A" name="buyAttack" visibility="public">
+          <ownedComment xmi:id="_5gZgwL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Used to buy line attack and AoE attack Cost: &lt;br> line attack = 6 points &lt;br> AoE attack = 4 points
+ * @param type '1 = attack line, 2 = AoE shot'
+ * @return True - if player can afford to buy the attack
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5gVPUb1cEeqCU9pJ6xA93A" name="type">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5gVPUr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gZgwb1cEeqCU9pJ6xA93A" name="getState" visibility="public">
+          <ownedComment xmi:id="_5gbV8L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * --------------------------------------------------------------------------------------------------------- --------------------------- Getters &amp;&amp; Setters --------------------------- ---------------------------------------------------------------------------------------------------------
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5gZgwr1cEeqCU9pJ6xA93A" name="return" type="_5T-OUb1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gbV8b1cEeqCU9pJ6xA93A" name="setState" visibility="public">
+          <ownedParameter xmi:id="_5gbV8r1cEeqCU9pJ6xA93A" name="state" type="_5T-OUb1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5geZQL1cEeqCU9pJ6xA93A" name="getShipsList" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_5geZQb1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ggOcL1cEeqCU9pJ6xA93A" name="getPlayerBoard" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_5ggOcb1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5giDoL1cEeqCU9pJ6xA93A" name="getEnemyBoard" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_5giDob1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gjRwL1cEeqCU9pJ6xA93A" name="getGameSize" visibility="public">
+          <ownedComment xmi:id="_5glG8L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * @return the gameSize
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5gjRwb1cEeqCU9pJ6xA93A" name="return" type="_5UsAAb1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gluAL1cEeqCU9pJ6xA93A" name="setPlacementAsFinished" visibility="public" isAbstract="true">
+          <ownedComment xmi:id="_5gnjML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * --------------------------------------------------------------------------------------------------------- --------------------------- Other interactions --------------------------- ---------------------------------------------------------------------------------------------------------
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5goKQL1cEeqCU9pJ6xA93A" name="getPoints" visibility="public">
+          <ownedParameter xmi:id="_5goKQb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5gp_cL1cEeqCU9pJ6xA93A" name="reset" visibility="public" isAbstract="true"/>
+        <ownedOperation xmi:id="_5gr0oL1cEeqCU9pJ6xA93A" name="exit" visibility="public" isAbstract="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5UB4sL1cEeqCU9pJ6xA93A" name="OnlineController" clientDependency="_5gxUML1cEeqCU9pJ6xA93A" isAbstract="true">
+        <ownedComment xmi:id="_5UJ0gL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * TODO: &lt;br> - SERVER JSON &amp; GLOBAL SCORE ??
+ */
+</body>
+        </ownedComment>
+        <generalization xmi:id="_5gzwcL1cEeqCU9pJ6xA93A" general="_5T7LAL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5g2zwL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5g2zwb1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5g9hcL1cEeqCU9pJ6xA93A" name="newLine" visibility="protected" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5hEPIL1cEeqCU9pJ6xA93A" name="showEnemyBoard" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5hNZEL1cEeqCU9pJ6xA93A" name="socket" visibility="protected" type="_5ZavAb1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5hV78L1cEeqCU9pJ6xA93A" name="isHost" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_5hV78b1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5hdQsL1cEeqCU9pJ6xA93A" name="writerChannel" visibility="protected" type="_5ZaH8L1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5hiwQL1cEeqCU9pJ6xA93A" name="readerChannel" visibility="protected" type="_5ZZg4r1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5ho24L1cEeqCU9pJ6xA93A" name="gameResponse" visibility="protected" type="_5T5V0L1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5hwLoL1cEeqCU9pJ6xA93A" name="p2pState" visibility="protected" type="_5UJ0gb1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5h3gYL1cEeqCU9pJ6xA93A" name="enemyBoard" visibility="protected" type="_5VsFkL1cEeqCU9pJ6xA93A" association="_5suFgr1cEeqCU9pJ6xA93A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5h3gYb1cEeqCU9pJ6xA93A" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5h3gYr1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5h-1IL1cEeqCU9pJ6xA93A" name="pointsObtained" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5iHYAL1cEeqCU9pJ6xA93A" name="h" visibility="package" type="_5iDGkb1cEeqCU9pJ6xA93A">
+          <ownedComment xmi:id="_5iLpcL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Caught Exceptions in other threads. Used to catch lost connection.
+ */
+</body>
+          </ownedComment>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_5gxUML1cEeqCU9pJ6xA93A" name="IObserver" supplier="_5V5g8b1cEeqCU9pJ6xA93A" client="_5UB4sL1cEeqCU9pJ6xA93A" contract="_5V5g8b1cEeqCU9pJ6xA93A"/>
+        <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_5UJ0gb1cEeqCU9pJ6xA93A" name="ConnectionStates">
+          <ownedComment xmi:id="_5UQiML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * All host and client possibles states
+ */
+</body>
+          </ownedComment>
+          <ownedLiteral xmi:id="_5j4Skb1cEeqCU9pJ6xA93A" name="CONNECTION"/>
+          <ownedLiteral xmi:id="_5j4Skr1cEeqCU9pJ6xA93A" name="WAIT_CONNECTION"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_5URJQL1cEeqCU9pJ6xA93A" name="Commands" visibility="protected">
+          <ownedComment xmi:id="_5UXP4L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Commands that host or client can send and receive
+ */
+</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_5j5gsL1cEeqCU9pJ6xA93A" name="toString" visibility="public">
+            <ownedParameter xmi:id="_5j5gsb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedLiteral xmi:id="_5j4Sk71cEeqCU9pJ6xA93A" name="CONNECT"/>
+          <ownedLiteral xmi:id="_5j4SlL1cEeqCU9pJ6xA93A" name="PLACEMENT_START"/>
+          <ownedLiteral xmi:id="_5j4Slb1cEeqCU9pJ6xA93A" name="PLACEMENT_END"/>
+          <ownedLiteral xmi:id="_5j4Slr1cEeqCU9pJ6xA93A" name="START"/>
+          <ownedLiteral xmi:id="_5j4Sl71cEeqCU9pJ6xA93A" name="EXIT"/>
+          <ownedLiteral xmi:id="_5j4SmL1cEeqCU9pJ6xA93A" name="ATTACK"/>
+          <ownedLiteral xmi:id="_5j45oL1cEeqCU9pJ6xA93A" name="HIT"/>
+          <ownedLiteral xmi:id="_5j45ob1cEeqCU9pJ6xA93A" name="KILL"/>
+          <ownedLiteral xmi:id="_5j45or1cEeqCU9pJ6xA93A" name="MISS"/>
+          <ownedLiteral xmi:id="_5j45o71cEeqCU9pJ6xA93A" name="INVALID"/>
+          <ownedLiteral xmi:id="_5j45pL1cEeqCU9pJ6xA93A" name="YOU_WIN"/>
+          <ownedLiteral xmi:id="_5j45pb1cEeqCU9pJ6xA93A" name="WAIT"/>
+          <ownedLiteral xmi:id="_5j45pr1cEeqCU9pJ6xA93A" name="SHIELD"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_5UX28L1cEeqCU9pJ6xA93A" name="ServerSideConnection" visibility="protected">
+          <ownedOperation xmi:id="_5j6HwL1cEeqCU9pJ6xA93A" name="run" visibility="public"/>
+        </nestedClassifier>
+        <ownedOperation xmi:id="_5iMQgL1cEeqCU9pJ6xA93A" name="init" visibility="private">
+          <ownedComment xmi:id="_5iQh8L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Will initiate the game with the needed information. It will create the Player object. Only one as this is the PvP mode and the other one will be added later We make the player an observer to be able to update points
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5iMQgb1cEeqCU9pJ6xA93A" name="playerId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5iRJAL1cEeqCU9pJ6xA93A" name="getStateConnection" visibility="public">
+          <ownedComment xmi:id="_5iUMUL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * A method that will return the state of the p2p connection
+ * @return p2pState
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5iRJAb1cEeqCU9pJ6xA93A" name="return" type="_5UJ0gb1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5iUzYb1cEeqCU9pJ6xA93A" name="getState" visibility="public">
+          <ownedComment xmi:id="_5iX2sL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Overridden method to comunicate about p2p states
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5iUzYr1cEeqCU9pJ6xA93A" name="return" type="_5iUzYL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5iYdwL1cEeqCU9pJ6xA93A" name="placeShip" visibility="public">
+          <ownedComment xmi:id="_5ibhEL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * This is a passing method that will call the placeShip method in Player Only needed for player as the Computer doesn't have a manual placement
+ * @param cellLocation
+ * @param ship
+ * @param horizzontal
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5iYdwb1cEeqCU9pJ6xA93A" name="cellLocation">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5iYdwr1cEeqCU9pJ6xA93A" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5iYdw71cEeqCU9pJ6xA93A"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5iYdxL1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5iYdxb1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ibhEb1cEeqCU9pJ6xA93A" name="randomPlacement" visibility="public">
+          <ownedComment xmi:id="_5iekYL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * A passing function that will call askRandomPlacement for the Player
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ifygL1cEeqCU9pJ6xA93A" name="fire" visibility="public">
+          <ownedComment xmi:id="_5ii10L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Used for player fire action.
+ * @param x          pos
+ * @param y          pos
+ * @param fireType   0 = normal shot , 1 = attack line, 2 = AoE shot
+ * @param horizontal
+ * @return GameResponse
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5ifygb1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ifygr1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ifyg71cEeqCU9pJ6xA93A" name="fireType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ifyhL1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ifyhb1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ijc4L1cEeqCU9pJ6xA93A" name="autoFire" visibility="public">
+          <ownedComment xmi:id="_5il5IL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Manage and response to enemy shot
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5ikD8L1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ikD8b1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ikD8r1cEeqCU9pJ6xA93A" name="fireType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ikD871cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5ikD9L1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5imgML1cEeqCU9pJ6xA93A" name="getEnemyId" visibility="public">
+          <ownedComment xmi:id="_5io8cL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * --------------------------------------------------------------------------------------------------------- --------------------------- Getters &amp;&amp; Setters --------------------------- ---------------------------------------------------------------------------------------------------------
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5imgMb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5io8cb1cEeqCU9pJ6xA93A" name="getShipsList" visibility="public">
+          <ownedParameter xmi:id="_5io8cr1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ir_wL1cEeqCU9pJ6xA93A" name="getEnemyBoard" visibility="public">
+          <ownedParameter xmi:id="_5ir_wb1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ivDEL1cEeqCU9pJ6xA93A" name="getPlayerBoard" visibility="public">
+          <ownedParameter xmi:id="_5ivDEb1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5izUgL1cEeqCU9pJ6xA93A" name="getHostData" visibility="protected">
+          <ownedComment xmi:id="_5i2X0L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Obtains the data of the host.
+ * @param hostSocket
+ * @return jObj.toString
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5izUgb1cEeqCU9pJ6xA93A" name="hostSocket">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5izUgr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5i2X0b1cEeqCU9pJ6xA93A" name="boardToBytes" visibility="protected">
+          <ownedComment xmi:id="_5i5bIL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * A method to pass the board in Byte form
+ * @return the board in Byte form
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5i2X0r1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5i6CML1cEeqCU9pJ6xA93A" name="bytesToBoard" visibility="protected">
+          <ownedComment xmi:id="_5i8ecL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * A method to transform the ByteBoard to board
+ * @param bytes
+ * @return board
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5i6CMb1cEeqCU9pJ6xA93A" name="bytes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5i6CMr1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5i9FgL1cEeqCU9pJ6xA93A" name="parseCommand" visibility="protected">
+          <ownedComment xmi:id="_5i_hwL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * A method to parse the needed command for the PvP mode
+ * @throws IOException
+ * @throws JSONException
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jAI0L1cEeqCU9pJ6xA93A" name="onAttackCommand" visibility="protected">
+          <ownedComment xmi:id="_5jEaQL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Receives the attack command and passes the response
+ * @param data
+ * @throws JSONException
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5jAI0b1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jFBUL1cEeqCU9pJ6xA93A" name="onAttackResponseCommand" visibility="protected">
+          <ownedComment xmi:id="_5jJ50L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Informs on what has to be done after an attack has been received
+ * @param data
+ * @throws JSONException
+ * @throws Exception
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5jFBUb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jKg4L1cEeqCU9pJ6xA93A" name="onExitCommand" visibility="protected" isAbstract="true"/>
+        <ownedOperation xmi:id="_5jNkML1cEeqCU9pJ6xA93A" name="onConnectCommand" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:id="_5jNkMb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jROkL1cEeqCU9pJ6xA93A" name="onPlacementStartCommand" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:id="_5jROkb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jTq0L1cEeqCU9pJ6xA93A" name="onPlacementEndCommand" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:id="_5jTq0b1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jXVML1cEeqCU9pJ6xA93A" name="onStartCommand" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:id="_5jXVMb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ja_kL1cEeqCU9pJ6xA93A" name="onYouWinCommand" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:id="_5ja_kb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jeC4L1cEeqCU9pJ6xA93A" name="onWaitCommand" visibility="protected" isAbstract="true"/>
+        <ownedOperation xmi:id="_5jgfIL1cEeqCU9pJ6xA93A" name="readBoard" visibility="protected">
+          <ownedParameter xmi:id="_5jgfIb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ji7YL1cEeqCU9pJ6xA93A" name="sendBoard" visibility="protected"/>
+        <ownedOperation xmi:id="_5jl-sL1cEeqCU9pJ6xA93A" name="send" visibility="protected">
+          <ownedComment xmi:id="_5joa8L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Sends the start Command so the needed actions can be carried out
+ * @param start
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5jl-sb1cEeqCU9pJ6xA93A" name="start" type="_5URJQL1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jpCAL1cEeqCU9pJ6xA93A" name="sendData" visibility="protected">
+          <ownedComment xmi:id="_5jreQL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Sends the data String
+ * @param data
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5jpCAb1cEeqCU9pJ6xA93A" name="data">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jsFUL1cEeqCU9pJ6xA93A" name="read" visibility="protected">
+          <ownedComment xmi:id="_5juhkL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Will read the data sent to it
+ * @return data
+ * @throws IOException
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5jsFUb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jvIoL1cEeqCU9pJ6xA93A" name="reset" visibility="public">
+          <ownedComment xmi:id="_5jxk4L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Sends the Reset request and then waits for a response
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5jyL8L1cEeqCU9pJ6xA93A" name="exit" visibility="public">
+          <ownedComment xmi:id="_5j0oML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Sends the Exit request and then send to main menu (or other GUI menu)
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5j1PQL1cEeqCU9pJ6xA93A" name="update" visibility="public">
+          <ownedComment xmi:id="_5j4SkL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Updates the points
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5j1PQb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5j1PQr1cEeqCU9pJ6xA93A" name="points">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5stecL1cEeqCU9pJ6xA93A" memberEnd="_5eQLsL1cEeqCU9pJ6xA93A _5stecb1cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5stecb1cEeqCU9pJ6xA93A" name="LocalController" type="_5Tu9wL1cEeqCU9pJ6xA93A" association="_5stecL1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suFgL1cEeqCU9pJ6xA93A" memberEnd="_5gAfML1cEeqCU9pJ6xA93A _5suFgb1cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5suFgb1cEeqCU9pJ6xA93A" name="Controller" type="_5T7LAL1cEeqCU9pJ6xA93A" association="_5suFgL1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suFgr1cEeqCU9pJ6xA93A" memberEnd="_5h3gYL1cEeqCU9pJ6xA93A _5suFg71cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5suFg71cEeqCU9pJ6xA93A" name="OnlineController" type="_5UB4sL1cEeqCU9pJ6xA93A" association="_5suFgr1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5UfLsL1cEeqCU9pJ6xA93A" name="model">
+      <packagedElement xmi:type="uml:Class" xmi:id="_5UfywL1cEeqCU9pJ6xA93A" name="Board" clientDependency="_5j-ZML1cEeqCU9pJ6xA93A">
+        <ownedComment xmi:id="_5UnukL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * The board class contains all game elements present in the GUI It contains all information on the CELLS as well as their state It also has all the ship objects and their state and position
+ */
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_5kCqoL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <ownedComment xmi:id="_5kFt8L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ */
+</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5kCqob1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5kIKML1cEeqCU9pJ6xA93A" name="size" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5kNpwL1cEeqCU9pJ6xA93A" name="lista" visibility="private" type="_5VeDIL1cEeqCU9pJ6xA93A" association="_5suFhL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5kUXcL1cEeqCU9pJ6xA93A" name="mat" visibility="private" type="_5VsFkL1cEeqCU9pJ6xA93A" association="_5suFhr1cEeqCU9pJ6xA93A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5kUXcb1cEeqCU9pJ6xA93A" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5kUXcr1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5kkPEL1cEeqCU9pJ6xA93A" name="observers" visibility="private" type="_5khy0L1cEeqCU9pJ6xA93A">
+          <ownedComment xmi:id="_5kn5cL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * This list is needed to be able to handle the list of Observers the board has
+ */
+</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5kqVsL1cEeqCU9pJ6xA93A" name="lastHit" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5kqVsb1cEeqCU9pJ6xA93A" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5kqVsr1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_5j-ZML1cEeqCU9pJ6xA93A" name="ISubject" supplier="_5V454L1cEeqCU9pJ6xA93A" client="_5UfywL1cEeqCU9pJ6xA93A" contract="_5V454L1cEeqCU9pJ6xA93A"/>
+        <ownedOperation xmi:id="_5ksx8L1cEeqCU9pJ6xA93A" name="create" visibility="public">
+          <ownedComment xmi:id="_5kv1QL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Used to initialise all cells in the board and sets them to WATER as a default value
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5kv1Qb1cEeqCU9pJ6xA93A" name="registerObserver" visibility="public">
+          <ownedParameter xmi:id="_5kv1Qr1cEeqCU9pJ6xA93A" name="observer" type="_5V5g8b1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ky4kL1cEeqCU9pJ6xA93A" name="unregisterObserver" visibility="public">
+          <ownedParameter xmi:id="_5ky4kb1cEeqCU9pJ6xA93A" name="observer" type="_5V5g8b1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5k174L1cEeqCU9pJ6xA93A" name="notifyObserver" visibility="public">
+          <ownedParameter xmi:id="_5k174b1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5k174r1cEeqCU9pJ6xA93A" name="points">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5k4YIL1cEeqCU9pJ6xA93A" name="getLastShot" visibility="public">
+          <ownedParameter xmi:id="_5k4YIb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5k8pkL1cEeqCU9pJ6xA93A" name="randomShipPlacement" visibility="public">
+          <ownedComment xmi:id="_5k_F0L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * The algorithm for the random placement of ships on the board. This is used when the Player chooses random placement or for when the machine is playing
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5k_s4L1cEeqCU9pJ6xA93A" name="manualPlacement" visibility="public">
+          <ownedComment xmi:id="_5lCJIL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * This method is used for the manual placement. It performs all the necessary checking to validate the placement
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lDXQL1cEeqCU9pJ6xA93A" name="checkPosition" visibility="public">
+          <ownedComment xmi:id="_5lGakL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * This method checks for the current positions and all other positions that the ship might take (tam) and its orientation (or) Will return true if its possible to place in the desired spot and false in any other scenario.
+ * @param tam
+ * @param or
+ * @param x
+ * @param y
+ * @return TRUE or FALSE
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lDXQb1cEeqCU9pJ6xA93A" name="tam">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lDXQr1cEeqCU9pJ6xA93A" name="or">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lDXQ71cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lDXRL1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lDXRb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lHBoL1cEeqCU9pJ6xA93A" name="placementShip" visibility="public">
+          <ownedComment xmi:id="_5lJd4L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * A passing method that places the cell of the ship and then goes to the next cell
+ * @param x
+ * @param y
+ * @param ship
+ * @param or
+ * @return TRUE or FALSE
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lHBob1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lHBor1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lHBo71cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5lHBpL1cEeqCU9pJ6xA93A" name="or">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lHBpb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lKE8L1cEeqCU9pJ6xA93A" name="posHasHit" visibility="public">
+          <ownedComment xmi:id="_5lMhML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Determines if its a hit on an alive ship &lt;br> Also call notifyObserver() to publish updates
+ * @param pos - position of hit
+ * @return '0' If its just a hit. If its a kill, it returns 'ship size' (shipsize == points for certain ship)
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lKE8b1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5lKE8r1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lNIQL1cEeqCU9pJ6xA93A" name="isHit" visibility="public">
+          <ownedParameter xmi:id="_5lNIQb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5lNIQr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lQLkL1cEeqCU9pJ6xA93A" name="isKill" visibility="private">
+          <ownedComment xmi:id="_5lSn0L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Is this hit a kill? If yes, how many points do I get?
+ * @param position of hit
+ * @return '0' If its just a hit. If its a kill, it returns 'ship size' (shipsize == points for certain ship)
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lQLkb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5lQLkr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lSn0b1cEeqCU9pJ6xA93A" name="setShipKilled" visibility="private">
+          <ownedComment xmi:id="_5lVEEL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Will set the ship id to KILLED
+ * @param id
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lTO4L1cEeqCU9pJ6xA93A" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lVrIL1cEeqCU9pJ6xA93A" name="isOut" visibility="public">
+          <ownedComment xmi:id="_5lYucL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Checks if the given position is in the board. If in the board out == false else out == true
+ * @param pos
+ * @return out
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lVrIb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5lVrIr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lYucb1cEeqCU9pJ6xA93A" name="alreadyShot" visibility="public">
+          <ownedComment xmi:id="_5lbKsL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Will return true if the cell has already been shot and false in any other case
+ * @param pos
+ * @return alreadyShot
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lYucr1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5lYuc71cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lbxwL1cEeqCU9pJ6xA93A" name="isShip" visibility="public">
+          <ownedComment xmi:id="_5leOAL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Lee el primer simbolo del cell y comprueba si es letra, si lo es entonces es un barco
+ * @param pos[] in the board
+ * @return True if the cell contains a ship, else False
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lbxwb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5lbxwr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5le1EL1cEeqCU9pJ6xA93A" name="getShipsList" visibility="public">
+          <ownedParameter xmi:id="_5le1Eb1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lhRUL1cEeqCU9pJ6xA93A" name="getShipsNumber" visibility="public">
+          <ownedParameter xmi:id="_5lhRUb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lkUoL1cEeqCU9pJ6xA93A" name="setCellShield" visibility="public">
+          <ownedParameter xmi:id="_5lk7sL1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lk7sb1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lnX8L1cEeqCU9pJ6xA93A" name="getMat" visibility="public">
+          <ownedComment xmi:id="_5lp0ML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * @return the mat
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lnX8b1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lqbQL1cEeqCU9pJ6xA93A" name="setMat" visibility="public">
+          <ownedComment xmi:id="_5lussL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * @param mat the mat to set
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lqbQb1cEeqCU9pJ6xA93A" name="mat" type="_5VsFkL1cEeqCU9pJ6xA93A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5lqbQr1cEeqCU9pJ6xA93A" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5lqbQ71cEeqCU9pJ6xA93A"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lvTwL1cEeqCU9pJ6xA93A" name="getBoardLength" visibility="public">
+          <ownedParameter xmi:id="_5lvTwb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5lzlML1cEeqCU9pJ6xA93A" name="updateBoard" visibility="public">
+          <ownedComment xmi:id="_5l2ogL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Actualiza la celda (x, y) del tablero segun el resultado del disparo
+ * @param x     coor
+ * @param y     coor
+ * @param isHit boleano de si el disparo fue hit o no
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5lzlMb1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lzlMr1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5lzlM71cEeqCU9pJ6xA93A" name="points">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5l3PkL1cEeqCU9pJ6xA93A" name="cargar" visibility="package"/>
+        <ownedOperation xmi:id="_5l7hAL1cEeqCU9pJ6xA93A" name="getShip" visibility="public">
+          <ownedParameter xmi:id="_5l7hAb1cEeqCU9pJ6xA93A" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5l7hAr1cEeqCU9pJ6xA93A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5l7hA71cEeqCU9pJ6xA93A" name="return" type="_5VXVcL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5l_ycL1cEeqCU9pJ6xA93A" name="toString" visibility="public">
+          <ownedParameter xmi:id="_5l_ycb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mC1wL1cEeqCU9pJ6xA93A" name="report" visibility="public">
+          <ownedParameter xmi:id="_5mC1wb1cEeqCU9pJ6xA93A" name="return" type="_5ZckMr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mFSAL1cEeqCU9pJ6xA93A" name="load" visibility="public">
+          <ownedParameter xmi:id="_5mFSAb1cEeqCU9pJ6xA93A" name="jo" type="_5ZckMr1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_5Uqx4L1cEeqCU9pJ6xA93A" name="IAttacks">
+        <ownedComment xmi:id="_5UsAAL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * Interface for the receiving of different attacks. Implemented in the Player class
+ */
+</body>
+        </ownedComment>
+        <ownedOperation xmi:id="_5mHuQL1cEeqCU9pJ6xA93A" name="receiveNormalAttack" visibility="public">
+          <ownedParameter xmi:id="_5mHuQb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5mIVUL1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mIVUb1cEeqCU9pJ6xA93A" name="receiveLineAttack" visibility="public">
+          <ownedParameter xmi:id="_5mIVUr1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5mIVU71cEeqCU9pJ6xA93A" name="receiveLineAttack">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5mIVVL1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mIVVb1cEeqCU9pJ6xA93A" name="receiveAOEAttack" visibility="public">
+          <ownedParameter xmi:id="_5mIVVr1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5mIVV71cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_5UsAAb1cEeqCU9pJ6xA93A" name="GameSize">
+        <ownedComment xmi:id="_5UvDUL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * This enum is used to determine game size and the amount of boats given by the board size.
+ */
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_5mKKgL1cEeqCU9pJ6xA93A" name="size" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mKxkL1cEeqCU9pJ6xA93A" name="numPatrol" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mL_sL1cEeqCU9pJ6xA93A" name="numDestroyer" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mNN0L1cEeqCU9pJ6xA93A" name="numSubmarine" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mN04L1cEeqCU9pJ6xA93A" name="numCruiser" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mPDAL1cEeqCU9pJ6xA93A" name="numBattleship" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mQRIL1cEeqCU9pJ6xA93A" name="numCarrier" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mQ4ML1cEeqCU9pJ6xA93A" name="totalNumShips" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_5mRfQL1cEeqCU9pJ6xA93A" name="getShipsSizeList" visibility="public">
+          <ownedParameter xmi:id="_5mRfQb1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mRfQr1cEeqCU9pJ6xA93A" name="getSize" visibility="public">
+          <ownedParameter xmi:id="_5mRfQ71cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mRfRL1cEeqCU9pJ6xA93A" name="getTotalNumShips" visibility="public">
+          <ownedParameter xmi:id="_5mRfRb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mSGUL1cEeqCU9pJ6xA93A" name="getNumPatrolBoat" visibility="public">
+          <ownedParameter xmi:id="_5mSGUb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mSGUr1cEeqCU9pJ6xA93A" name="getNumDestroyer" visibility="public">
+          <ownedParameter xmi:id="_5mSGU71cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mSGVL1cEeqCU9pJ6xA93A" name="getNumSubmarine" visibility="public">
+          <ownedParameter xmi:id="_5mSGVb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mStYL1cEeqCU9pJ6xA93A" name="getNumCruiser" visibility="public">
+          <ownedParameter xmi:id="_5mStYb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mStYr1cEeqCU9pJ6xA93A" name="getNumBattleship" visibility="public">
+          <ownedParameter xmi:id="_5mStY71cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mStZL1cEeqCU9pJ6xA93A" name="getNumCarrier" visibility="public">
+          <ownedParameter xmi:id="_5mStZb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mStZr1cEeqCU9pJ6xA93A" name="getNames" visibility="public" isStatic="true">
+          <ownedParameter xmi:id="_5mStZ71cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mTUcL1cEeqCU9pJ6xA93A" name="paint" visibility="public">
+          <ownedParameter xmi:id="_5mTUcb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedLiteral xmi:id="_5mI8YL1cEeqCU9pJ6xA93A" name="REDUCED"/>
+        <ownedLiteral xmi:id="_5mI8Yb1cEeqCU9pJ6xA93A" name="CLASSIC"/>
+        <ownedLiteral xmi:id="_5mI8Yr1cEeqCU9pJ6xA93A" name="INSANE"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5UzUwL1cEeqCU9pJ6xA93A" name="Computer">
+        <ownedComment xmi:id="_5U1xAL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * This class encapsulates the behaviour of the computer player. This is only given when the game mode is set to PvE
+ */
+</body>
+        </ownedComment>
+        <generalization xmi:id="_5mTUcr1cEeqCU9pJ6xA93A" general="_5U2YEL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5mUikL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5mUikb1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mW-0L1cEeqCU9pJ6xA93A" name="lastShot" visibility="private" type="_5mVwsL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5mY0AL1cEeqCU9pJ6xA93A" name="strategy" visibility="private" type="_5VIr8L1cEeqCU9pJ6xA93A" association="_5suskL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5mbQQL1cEeqCU9pJ6xA93A" name="hunt" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_5mbQQb1cEeqCU9pJ6xA93A" value="true"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mdsgL1cEeqCU9pJ6xA93A" name="cont" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5mfhsL1cEeqCU9pJ6xA93A" name="difficulty" visibility="private" type="_5U-T4L1cEeqCU9pJ6xA93A"/>
+        <ownedOperation xmi:id="_5mgv0L1cEeqCU9pJ6xA93A" name="update" visibility="public">
+          <ownedComment xmi:id="_5mh98L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Updates the necessary elements contained by the player. If int p is greater that 0 it means that a ship was destroyed. That is why we set the given cell to KILLED_CELL
+ * @param pos
+ * @param p
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5mgv0b1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5mgv0r1cEeqCU9pJ6xA93A" name="p">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5milAL1cEeqCU9pJ6xA93A" name="askRandomPlacement" visibility="public">
+          <ownedComment xmi:id="_5mjMEL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Manages the placement of the ships in a random order.
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mjzIL1cEeqCU9pJ6xA93A" name="askAttackAction" visibility="public">
+          <ownedComment xmi:id="_5mlBQL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * This method is in charge of the attack behaviour of the computer. Depending on the level chosen it will have one behaviour or another
+ * @param game
+ * @return computerAttackAction(game)
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5mjzIb1cEeqCU9pJ6xA93A" name="game" type="_5Tu9wL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5mjzIr1cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mlBQb1cEeqCU9pJ6xA93A" name="computerAttackAction" visibility="private">
+          <ownedComment xmi:id="_5mmPYL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * This method is the one called by the controller to manage the attack of the computer The last shot is assigned to lastShot which in turn is used for the higher levels of computerAttackAction(game)
+ * @param game
+ * @return pos
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5mlBQr1cEeqCU9pJ6xA93A" name="game" type="_5Tu9wL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5mlBQ71cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mm2cL1cEeqCU9pJ6xA93A" name="computerActionStrategySelector" visibility="private">
+          <ownedComment xmi:id="_5moEkL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Depending on the level of the game the instance of ComputerAttackStrategy is chosen
+ * @param game
+ * @return IComputerAttackStrategy
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5mm2cb1cEeqCU9pJ6xA93A" name="game" type="_5Tu9wL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5mm2cr1cEeqCU9pJ6xA93A" name="return" type="_5VIr8L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5moEkb1cEeqCU9pJ6xA93A" name="getLastShot" visibility="public">
+          <ownedParameter xmi:id="_5moEkr1cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mp5wL1cEeqCU9pJ6xA93A" name="prepareTargetMode" visibility="public">
+          <ownedParameter xmi:id="_5mp5wb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mru8L1cEeqCU9pJ6xA93A" name="report" visibility="public">
+          <ownedParameter xmi:id="_5mru8b1cEeqCU9pJ6xA93A" name="return" type="_5ZckMr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ms9EL1cEeqCU9pJ6xA93A" name="load" visibility="public">
+          <ownedParameter xmi:id="_5ms9Eb1cEeqCU9pJ6xA93A" name="jo" type="_5ZckMr1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mtkIL1cEeqCU9pJ6xA93A" name="isHunt" visibility="public">
+          <ownedParameter xmi:id="_5mtkIb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mvZUL1cEeqCU9pJ6xA93A" name="setHunt" visibility="public">
+          <ownedParameter xmi:id="_5mvZUb1cEeqCU9pJ6xA93A" name="hunt">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mwncL1cEeqCU9pJ6xA93A" name="getCont" visibility="public">
+          <ownedParameter xmi:id="_5mwncb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mxOgL1cEeqCU9pJ6xA93A" name="setCont" visibility="public">
+          <ownedParameter xmi:id="_5mxOgb1cEeqCU9pJ6xA93A" name="cont">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5mycoL1cEeqCU9pJ6xA93A" name="incrementCont" visibility="public"/>
+        <ownedOperation xmi:id="_5m0R0L1cEeqCU9pJ6xA93A" name="resetCont" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5U2YEL1cEeqCU9pJ6xA93A" name="Player" clientDependency="_5m1f8L1cEeqCU9pJ6xA93A _5m1f8b1cEeqCU9pJ6xA93A">
+        <ownedComment xmi:id="_5U73oL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * The player class is the model for the player. Each player has their own board, points, and their id
+ */
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_5m3VIL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5m3VIb1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5m6YcL1cEeqCU9pJ6xA93A" name="id" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5m-C0L1cEeqCU9pJ6xA93A" name="points" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5nAfEL1cEeqCU9pJ6xA93A" name="board" visibility="protected" type="_5UfywL1cEeqCU9pJ6xA93A" association="_5suskr1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5nDiYL1cEeqCU9pJ6xA93A" name="genControl" visibility="package" type="_5WA1sL1cEeqCU9pJ6xA93A" association="_5suslL1cEeqCU9pJ6xA93A"/>
+        <ownedAttribute xmi:id="_5nGlsL1cEeqCU9pJ6xA93A" name="historial" visibility="protected" type="_5VsFkL1cEeqCU9pJ6xA93A" association="_5suslr1cEeqCU9pJ6xA93A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5nGlsb1cEeqCU9pJ6xA93A" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5nGlsr1cEeqCU9pJ6xA93A"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_5m1f8L1cEeqCU9pJ6xA93A" name="IObserver" supplier="_5V5g8b1cEeqCU9pJ6xA93A" client="_5U2YEL1cEeqCU9pJ6xA93A" contract="_5V5g8b1cEeqCU9pJ6xA93A"/>
+        <interfaceRealization xmi:id="_5m1f8b1cEeqCU9pJ6xA93A" name="IAttacks" supplier="_5Uqx4L1cEeqCU9pJ6xA93A" client="_5U2YEL1cEeqCU9pJ6xA93A" contract="_5Uqx4L1cEeqCU9pJ6xA93A"/>
+        <ownedOperation xmi:id="_5nIa4L1cEeqCU9pJ6xA93A" name="update" visibility="public">
+          <ownedComment xmi:id="_5nJpAL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Updates the necessary elements contained by the player. If int p is greater that 0 it means that a ship was destroyed. That is why we set the given cell to KILLED_CELL
+ * @param pos
+ * @param p
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nIa4b1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nIa4r1cEeqCU9pJ6xA93A" name="p">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nKQEL1cEeqCU9pJ6xA93A" name="placeShip" visibility="public">
+          <ownedComment xmi:id="_5nLeML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Manages the placement of the ship and places it in the given cells
+ * @param cellLocation
+ * @param ship
+ * @param horizontal
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nKQEb1cEeqCU9pJ6xA93A" name="cellLocation">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5nKQEr1cEeqCU9pJ6xA93A" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5nKQE71cEeqCU9pJ6xA93A"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5nKQFL1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nKQFb1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nMFQL1cEeqCU9pJ6xA93A" name="askRandomPlacement" visibility="public">
+          <ownedComment xmi:id="_5nN6cL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Manages the placement of the ships in a random order.
+ */
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nOhgL1cEeqCU9pJ6xA93A" name="receiveNormalAttack" visibility="public">
+          <ownedComment xmi:id="_5nQWsL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Given a position it recieves the attack on said position
+ * @param pos
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nOhgb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nOhgr1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nQ9wL1cEeqCU9pJ6xA93A" name="receiveLineAttack" visibility="public">
+          <ownedComment xmi:id="_5nSL4L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Given a position it will attack the whole line that be horizontal or vertical (decided by the boolean horizontal) This is achieved by attacking every cell of that line individually with a for loop
+ * @param pos
+ * @param horizontal
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nQ9wb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nQ9wr1cEeqCU9pJ6xA93A" name="horizontal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_5nQ9w71cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nSy8L1cEeqCU9pJ6xA93A" name="receiveAOEAttack" visibility="public">
+          <ownedComment xmi:id="_5nUBEL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Given a position it will attack all cells adjacent to the initial cell This is achieved by attacking every cell of that adjacency individually with a for loop
+ * @param pos
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nSy8b1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nSy8r1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nUoIL1cEeqCU9pJ6xA93A" name="receiveAttack" visibility="private">
+          <ownedComment xmi:id="_5nWdUL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Depending on what the hit is classified as will return one game response or another.
+ * @param pos
+ * @return GameResponse
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nUoIb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nUoIr1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nWdUb1cEeqCU9pJ6xA93A" name="receiveDefenseCell" visibility="public">
+          <ownedComment xmi:id="_5nY5kL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Places a shield on the given cell
+ * @param pos
+ * @return
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nWdUr1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nWdU71cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nZgoL1cEeqCU9pJ6xA93A" name="reciveDefenseShip" visibility="public">
+          <ownedComment xmi:id="_5nbV0L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Places a shield on the whole boat associates with that cell
+ * @param pos
+ * @return
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nZgob1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5nZgor1cEeqCU9pJ6xA93A" name="return" type="_5T5V0L1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nbV0b1cEeqCU9pJ6xA93A" name="addPoints" visibility="public">
+          <ownedParameter xmi:id="_5nbV0r1cEeqCU9pJ6xA93A" name="toAdd">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ndLAL1cEeqCU9pJ6xA93A" name="getShipsList" visibility="public">
+          <ownedParameter xmi:id="_5ndLAb1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nfAML1cEeqCU9pJ6xA93A" name="getPoints" visibility="public">
+          <ownedParameter xmi:id="_5nfAMb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5ngOUL1cEeqCU9pJ6xA93A" name="getId" visibility="public">
+          <ownedParameter xmi:id="_5ngOUb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5niDgL1cEeqCU9pJ6xA93A" name="getNumShips" visibility="public">
+          <ownedParameter xmi:id="_5niDgb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5njRoL1cEeqCU9pJ6xA93A" name="getBoard" visibility="public">
+          <ownedParameter xmi:id="_5njRob1cEeqCU9pJ6xA93A" name="return" type="_5UfywL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nkfwL1cEeqCU9pJ6xA93A" name="toString" visibility="public">
+          <ownedParameter xmi:id="_5nkfwb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nmU8L1cEeqCU9pJ6xA93A" name="getGenControl" visibility="public">
+          <ownedParameter xmi:id="_5nmU8b1cEeqCU9pJ6xA93A" name="return" type="_5WA1sL1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nnjEL1cEeqCU9pJ6xA93A" name="setGenControl" visibility="public">
+          <ownedParameter xmi:id="_5nnjEb1cEeqCU9pJ6xA93A" name="genControl" type="_5WA1sL1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5npYQL1cEeqCU9pJ6xA93A" name="getBoardSize" visibility="public">
+          <ownedParameter xmi:id="_5npYQb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nqmYL1cEeqCU9pJ6xA93A" name="report" visibility="public">
+          <ownedParameter xmi:id="_5nqmYb1cEeqCU9pJ6xA93A" name="return" type="_5ZckMr1cEeqCU9pJ6xA93A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nsbkL1cEeqCU9pJ6xA93A" name="load" visibility="public">
+          <ownedParameter xmi:id="_5nsbkb1cEeqCU9pJ6xA93A" name="jo" type="_5ZckMr1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nuQwL1cEeqCU9pJ6xA93A" name="setBoard" visibility="public">
+          <ownedParameter xmi:id="_5nuQwb1cEeqCU9pJ6xA93A" name="mat" type="_5VsFkL1cEeqCU9pJ6xA93A">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5nuQwr1cEeqCU9pJ6xA93A" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5nuQw71cEeqCU9pJ6xA93A"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nwF8L1cEeqCU9pJ6xA93A" name="buySkills" visibility="public">
+          <ownedComment xmi:id="_5nxUEL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Resta los puntos al jugador al comprar una habilidad
+ * @param p Puntos
+ */
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_5nwF8b1cEeqCU9pJ6xA93A" name="p">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_5U-T4L1cEeqCU9pJ6xA93A" name="BotDifficulty">
+        <ownedComment xmi:id="_5U_iAL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * This enum is used to determine the game difficulty. This is important as the behaviour is determined by this enum
+ */
+</body>
+        </ownedComment>
+        <ownedOperation xmi:id="_5nx7I71cEeqCU9pJ6xA93A" name="paint" visibility="public">
+          <ownedParameter xmi:id="_5nx7JL1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nx7Jb1cEeqCU9pJ6xA93A" name="getNames" visibility="public" isStatic="true">
+          <ownedParameter xmi:id="_5nx7Jr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedLiteral xmi:id="_5nx7IL1cEeqCU9pJ6xA93A" name="EASY"/>
+        <ownedLiteral xmi:id="_5nx7Ib1cEeqCU9pJ6xA93A" name="NORMAL"/>
+        <ownedLiteral xmi:id="_5nx7Ir1cEeqCU9pJ6xA93A" name="HARD"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_5VDMYL1cEeqCU9pJ6xA93A" name="GameMode">
+        <ownedOperation xmi:id="_5nx7Kb1cEeqCU9pJ6xA93A" name="paint" visibility="public">
+          <ownedParameter xmi:id="_5nx7Kr1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5nyiML1cEeqCU9pJ6xA93A" name="getNames" visibility="public" isStatic="true">
+          <ownedParameter xmi:id="_5nyiMb1cEeqCU9pJ6xA93A" name="return" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedLiteral xmi:id="_5nx7J71cEeqCU9pJ6xA93A" name="PVE"/>
+        <ownedLiteral xmi:id="_5nx7KL1cEeqCU9pJ6xA93A" name="PVP"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_5VFBkL1cEeqCU9pJ6xA93A" name="strategies">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_5VIr8L1cEeqCU9pJ6xA93A" name="IComputerAttackStrategy">
+          <ownedComment xmi:id="_5VLIML1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Interface for IA attacks
+ */
+</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_5nzJQL1cEeqCU9pJ6xA93A" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedParameter xmi:id="_5nzJQb1cEeqCU9pJ6xA93A" name="computer" type="_5UzUwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5nzJQr1cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5nzJQ71cEeqCU9pJ6xA93A" name="hunt" visibility="public">
+            <ownedParameter xmi:id="_5nzJRL1cEeqCU9pJ6xA93A" name="computer" type="_5UzUwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5nzJRb1cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5nzwUL1cEeqCU9pJ6xA93A" name="attack" visibility="public">
+            <ownedParameter xmi:id="_5nzwUb1cEeqCU9pJ6xA93A" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5nzwUr1cEeqCU9pJ6xA93A" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5nzwU71cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5nzwVL1cEeqCU9pJ6xA93A" name="target" visibility="public">
+            <ownedParameter xmi:id="_5nzwVb1cEeqCU9pJ6xA93A" name="pair" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5nzwVr1cEeqCU9pJ6xA93A" name="computer" type="_5UzUwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5nzwV71cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5VNkcL1cEeqCU9pJ6xA93A" name="EasyComputerAttackStrategy" clientDependency="_5nzwWL1cEeqCU9pJ6xA93A">
+          <ownedComment xmi:id="_5VOykL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Easy computer strategy
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_5n0-cL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5n0-cb1cEeqCU9pJ6xA93A"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5n2MkL1cEeqCU9pJ6xA93A" name="boardSize" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_5nzwWL1cEeqCU9pJ6xA93A" name="IComputerAttackStrategy" supplier="_5VIr8L1cEeqCU9pJ6xA93A" client="_5VNkcL1cEeqCU9pJ6xA93A" contract="_5VIr8L1cEeqCU9pJ6xA93A"/>
+          <ownedOperation xmi:id="_5n2Mkb1cEeqCU9pJ6xA93A" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedParameter xmi:id="_5n2zoL1cEeqCU9pJ6xA93A" name="computer" type="_5UzUwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5n2zob1cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5VR14L1cEeqCU9pJ6xA93A" name="HardComputerAttackStrategy" clientDependency="_5n2zor1cEeqCU9pJ6xA93A">
+          <ownedComment xmi:id="_5VTEAL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Hard computer strategy
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_5n3asL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5n3asb1cEeqCU9pJ6xA93A"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5n4o0L1cEeqCU9pJ6xA93A" name="boardSize" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_5n2zor1cEeqCU9pJ6xA93A" name="IComputerAttackStrategy" supplier="_5VIr8L1cEeqCU9pJ6xA93A" client="_5VR14L1cEeqCU9pJ6xA93A" contract="_5VIr8L1cEeqCU9pJ6xA93A"/>
+          <ownedOperation xmi:id="_5n528L1cEeqCU9pJ6xA93A" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedParameter xmi:id="_5n528b1cEeqCU9pJ6xA93A" name="computer" type="_5UzUwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5n528r1cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5VVgQL1cEeqCU9pJ6xA93A" name="NormalComputerAttackStrategy" clientDependency="_5n6eAL1cEeqCU9pJ6xA93A">
+          <ownedComment xmi:id="_5VWHUL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Normal computer strategy: &lt;br> The way the NormalComputerAttackStrategy works is the following: &lt;br> + It will attack randomly searching for a target and will do this until it has hit a target. &lt;br> + When a target has been hit it will go into Target mode. In this mode the computer will attack to the cells adjacent to the target hit where unless a patrolBoat is hit the number of hits will always be at least > 1 &lt;br> + After all the adjacent cells have been shot we will return to hunt mode and the process is repeated
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_5n7sIL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5n8TML1cEeqCU9pJ6xA93A" name="boardSize" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_5n6eAL1cEeqCU9pJ6xA93A" name="IComputerAttackStrategy" supplier="_5VIr8L1cEeqCU9pJ6xA93A" client="_5VVgQL1cEeqCU9pJ6xA93A" contract="_5VIr8L1cEeqCU9pJ6xA93A"/>
+          <ownedOperation xmi:id="_5n86QL1cEeqCU9pJ6xA93A" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedComment xmi:id="_5n9hUL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * @param computer Bot player
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5n86Qb1cEeqCU9pJ6xA93A" name="computer" type="_5UzUwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5n86Qr1cEeqCU9pJ6xA93A" name="return" type="_5WLNwL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_5VWuYL1cEeqCU9pJ6xA93A" name="warships">
+        <packagedElement xmi:type="uml:Class" xmi:id="_5VXVcL1cEeqCU9pJ6xA93A" name="Ship" isAbstract="true">
+          <ownedComment xmi:id="_5VZxsL1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Clase del objeto de los diferentes ships TODO: ALIVE_CELL pasar a P00
+ * @author puppy
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_5n_WgL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oCZ0L1cEeqCU9pJ6xA93A" name="ALIVE_CELL" visibility="protected" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_5oCZ0b1cEeqCU9pJ6xA93A" value="O"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oFdIL1cEeqCU9pJ6xA93A" name="KILLED_CELL" visibility="protected" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_5oFdIb1cEeqCU9pJ6xA93A" value="X"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oIgcL1cEeqCU9pJ6xA93A" name="cellsLocation" visibility="protected" type="_5oHSUL1cEeqCU9pJ6xA93A">
+            <ownedComment xmi:id="_5oJukL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * LinkedHashMap that contains the position of the ship's cell. Also is used to know that the cell is killed or not. &lt;br> Key = Pair(Integer, Integer) &lt;br> Value = Cell &lt;br> The value is not a cell from Board matrix
+ */
+</body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oK8sL1cEeqCU9pJ6xA93A" name="orientationHorizontal" visibility="protected">
+            <ownedComment xmi:id="_5oLjwL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * True - horizontal, False - vertical
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oNY8L1cEeqCU9pJ6xA93A" name="size" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oPOIL1cEeqCU9pJ6xA93A" name="alive" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oSRcL1cEeqCU9pJ6xA93A" name="id" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oUtsL1cEeqCU9pJ6xA93A" name="type" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oXxAL1cEeqCU9pJ6xA93A" name="aliveCells" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5oaNQL1cEeqCU9pJ6xA93A" name="shield" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_5obbYL1cEeqCU9pJ6xA93A" name="hit" visibility="public">
+            <ownedComment xmi:id="_5odQkL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * Manages the hit on the ship. &lt;br> Kill the cell if the ship have not shield.
+ * @return True if the ship is sunk
+ * @return False if is only a hit in the ship OR hit on shield
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5obbYb1cEeqCU9pJ6xA93A" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5obbYr1cEeqCU9pJ6xA93A" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5obbY71cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5odQkb1cEeqCU9pJ6xA93A" name="setKilled" visibility="public"/>
+          <ownedOperation xmi:id="_5oeesL1cEeqCU9pJ6xA93A" name="placeShipCells" visibility="public">
+            <ownedComment xmi:id="_5ofs0L1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * Adds the ship's cells to the LinkedHashMap - cellsLocation
+ * @param cell
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5oeesb1cEeqCU9pJ6xA93A" name="cell" type="_5VsFkL1cEeqCU9pJ6xA93A"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ofs0b1cEeqCU9pJ6xA93A" name="getCells" visibility="public">
+            <ownedParameter xmi:id="_5ofs0r1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5og68L1cEeqCU9pJ6xA93A" name="getShield" visibility="public">
+            <ownedParameter xmi:id="_5og68b1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5oiJEL1cEeqCU9pJ6xA93A" name="setShield" visibility="public">
+            <ownedParameter xmi:id="_5oiJEb1cEeqCU9pJ6xA93A" name="shield">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ojXML1cEeqCU9pJ6xA93A" name="destroyShield" visibility="public"/>
+          <ownedOperation xmi:id="_5oklUL1cEeqCU9pJ6xA93A" name="getId" visibility="public">
+            <ownedParameter xmi:id="_5oklUb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5olzcL1cEeqCU9pJ6xA93A" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_5olzcb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5onBkL1cEeqCU9pJ6xA93A" name="getX" visibility="public">
+            <ownedParameter xmi:id="_5onBkb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ooPsL1cEeqCU9pJ6xA93A" name="getY" visibility="public">
+            <ownedParameter xmi:id="_5ooPsb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5opd0L1cEeqCU9pJ6xA93A" name="getCellState" visibility="public">
+            <ownedParameter xmi:id="_5opd0b1cEeqCU9pJ6xA93A" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5opd0r1cEeqCU9pJ6xA93A" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5opd071cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5orTAL1cEeqCU9pJ6xA93A" name="setCellState" visibility="private">
+            <ownedParameter xmi:id="_5orTAb1cEeqCU9pJ6xA93A" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5orTAr1cEeqCU9pJ6xA93A" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5orTA71cEeqCU9pJ6xA93A" name="n">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5oshIL1cEeqCU9pJ6xA93A" name="getState" visibility="public">
+            <ownedParameter xmi:id="_5oshIb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5otvQL1cEeqCU9pJ6xA93A" name="getOrientation" visibility="public">
+            <ownedComment xmi:id="_5ou9YL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * @return true == horizontal
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5otvQb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ovkcL1cEeqCU9pJ6xA93A" name="setOrientation" visibility="public">
+            <ownedComment xmi:id="_5owykL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * set 'orientationHorizontal'
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5ovkcb1cEeqCU9pJ6xA93A" name="b">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5owykb1cEeqCU9pJ6xA93A" name="getType" visibility="public">
+            <ownedParameter xmi:id="_5owykr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5oyAsL1cEeqCU9pJ6xA93A" name="toString" visibility="public">
+            <ownedParameter xmi:id="_5oyAsb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5oz14L1cEeqCU9pJ6xA93A" name="getAliveCells" visibility="public">
+            <ownedParameter xmi:id="_5oz14b1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5o1EAL1cEeqCU9pJ6xA93A" name="setAliveCells" visibility="public">
+            <ownedParameter xmi:id="_5o1EAb1cEeqCU9pJ6xA93A" name="ac">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5o2SIL1cEeqCU9pJ6xA93A" name="report" visibility="public">
+            <ownedParameter xmi:id="_5o2SIb1cEeqCU9pJ6xA93A" name="return" type="_5ZckMr1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5o4HUL1cEeqCU9pJ6xA93A" name="loadShip" visibility="public">
+            <ownedParameter xmi:id="_5o4HUb1cEeqCU9pJ6xA93A" name="shipCells" type="_5ZeZYr1cEeqCU9pJ6xA93A"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5VeDIL1cEeqCU9pJ6xA93A" name="ShipsManager">
+          <ownedAttribute xmi:id="_5o7xsL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5o7xsb1cEeqCU9pJ6xA93A"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5o-1AL1cEeqCU9pJ6xA93A" name="map" visibility="private" type="_5o9m4L1cEeqCU9pJ6xA93A">
+            <ownedComment xmi:id="_5pAqML1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * LinkedHashMap that contains a list of all alive ships. Key - Id. Value - Ship
+ */
+</body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5pCfYL1cEeqCU9pJ6xA93A" name="shipsNumber" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_5pEUkL1cEeqCU9pJ6xA93A" name="createShips" visibility="public">
+            <ownedComment xmi:id="_5pGJwL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * Manages the creation of the ships
+ * @param modo
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5pEUkb1cEeqCU9pJ6xA93A" name="modo" type="_5UsAAb1cEeqCU9pJ6xA93A"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pGJwb1cEeqCU9pJ6xA93A" name="createShip" visibility="public">
+            <ownedParameter xmi:id="_5pGJwr1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5pGJw71cEeqCU9pJ6xA93A" name="return" type="_5VXVcL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pH-8L1cEeqCU9pJ6xA93A" name="shipPlace" visibility="public">
+            <ownedComment xmi:id="_5pKbML1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * Manages the placement of the ships
+ * @param ship
+ * @param cell
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5pH-8b1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5pH-8r1cEeqCU9pJ6xA93A" name="cell" type="_5VsFkL1cEeqCU9pJ6xA93A"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pLCQL1cEeqCU9pJ6xA93A" name="manageHit" visibility="public">
+            <ownedComment xmi:id="_5pNegL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * Manages the hit on the ships
+ * @return True if the ship is sunk (is a kill)
+ * @return False if is only a hit in the ship or if is hit on shield
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5pLCQb1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5pLCQr1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5pLCQ71cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pNegb1cEeqCU9pJ6xA93A" name="setShipKilled" visibility="public">
+            <ownedParameter xmi:id="_5pNegr1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pP6wL1cEeqCU9pJ6xA93A" name="removeShip" visibility="private">
+            <ownedParameter xmi:id="_5pP6wb1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pRv8L1cEeqCU9pJ6xA93A" name="getShipsNumber" visibility="public">
+            <ownedParameter xmi:id="_5pRv8b1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pTlIL1cEeqCU9pJ6xA93A" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_5pTlIb1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5pTlIr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pVaUL1cEeqCU9pJ6xA93A" name="getSize" visibility="public">
+            <ownedParameter xmi:id="_5pVaUb1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5pVaUr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pXPgL1cEeqCU9pJ6xA93A" name="getListOfShips" visibility="public">
+            <ownedParameter xmi:id="_5pXPgb1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5paS0L1cEeqCU9pJ6xA93A" name="getX" visibility="public">
+            <ownedParameter xmi:id="_5paS0b1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5paS0r1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pcvEL1cEeqCU9pJ6xA93A" name="getX" visibility="public">
+            <ownedParameter xmi:id="_5pcvEb1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5pcvEr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pekQL1cEeqCU9pJ6xA93A" name="getY" visibility="public">
+            <ownedParameter xmi:id="_5pekQb1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5pekQr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5phAgL1cEeqCU9pJ6xA93A" name="getY" visibility="public">
+            <ownedParameter xmi:id="_5phAgb1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5phAgr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pjcwL1cEeqCU9pJ6xA93A" name="getOrientation" visibility="public">
+            <ownedParameter xmi:id="_5pjcwb1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5pjcwr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5plR8L1cEeqCU9pJ6xA93A" name="getType" visibility="public">
+            <ownedParameter xmi:id="_5plR8b1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5plR8r1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pnuML1cEeqCU9pJ6xA93A" name="getShip" visibility="public">
+            <ownedParameter xmi:id="_5pnuMb1cEeqCU9pJ6xA93A" name="id">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5pnuMr1cEeqCU9pJ6xA93A" name="return" type="_5VXVcL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ppjYL1cEeqCU9pJ6xA93A" name="getState" visibility="public">
+            <ownedParameter xmi:id="_5ppjYb1cEeqCU9pJ6xA93A" name="ship" type="_5VXVcL1cEeqCU9pJ6xA93A"/>
+            <ownedParameter xmi:id="_5ppjYr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5psmsL1cEeqCU9pJ6xA93A" name="toString" visibility="public">
+            <ownedParameter xmi:id="_5psmsb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pub4L1cEeqCU9pJ6xA93A" name="report" visibility="public">
+            <ownedParameter xmi:id="_5pub4b1cEeqCU9pJ6xA93A" name="return" type="_5Zj48L1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pwREL1cEeqCU9pJ6xA93A" name="load" visibility="public">
+            <ownedParameter xmi:id="_5pwREb1cEeqCU9pJ6xA93A" name="ja" type="_5Zj48L1cEeqCU9pJ6xA93A"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5pyGQL1cEeqCU9pJ6xA93A" name="prepareForGUI" visibility="public">
+            <ownedComment xmi:id="_5pz7cL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * Manages the ships and prepares them for the GUI &lt;br> Cell.get() = [position][type][orientation][shield] &lt;br> &lt;br> position = [S]tart-[C]enter-[E]nd &lt;br> type = [S]ingle-[N]ormal &lt;br> orientation = [H]orizontal-[V]ertical &lt;br> shield = 1-On, 0-Off&lt;br>
+ * @param export
+ * @return
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_5pyGQb1cEeqCU9pJ6xA93A" name="export" type="_5VsFkL1cEeqCU9pJ6xA93A">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5pyGQr1cEeqCU9pJ6xA93A" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5pyGQ71cEeqCU9pJ6xA93A"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5pyGRL1cEeqCU9pJ6xA93A" name="return" type="_5VsFkL1cEeqCU9pJ6xA93A" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5Vkw0L1cEeqCU9pJ6xA93A" name="Cruiser">
+          <generalization xmi:id="_5pz7cb1cEeqCU9pJ6xA93A" general="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedAttribute xmi:id="_5p0igL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5Vn0IL1cEeqCU9pJ6xA93A" name="Carrier">
+          <generalization xmi:id="_5p1JkL1cEeqCU9pJ6xA93A" general="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedAttribute xmi:id="_5p1woL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5p1wob1cEeqCU9pJ6xA93A"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5Vq3cL1cEeqCU9pJ6xA93A" name="PatrolBoat">
+          <generalization xmi:id="_5p2XsL1cEeqCU9pJ6xA93A" general="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedAttribute xmi:id="_5p2Xsb1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5VsFkL1cEeqCU9pJ6xA93A" name="Cell">
+          <ownedComment xmi:id="_5Vuh0L1cEeqCU9pJ6xA93A">
+            <body>/** 
+ * Base of the game. Used as building blocks to build up the game more concretely the board and objects contained by it &lt;br> Representation: ~ = water, X = Killed cell, O = Missed shot, P1 = PatrolBoat with id == 1,...
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_5p4M4L1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5p5bAL1cEeqCU9pJ6xA93A" name="WATER_CELL" visibility="public" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_5p5bAb1cEeqCU9pJ6xA93A" value="~"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5p6pIL1cEeqCU9pJ6xA93A" name="KILLED_CELL" visibility="public" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_5p6pIb1cEeqCU9pJ6xA93A" value="X"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5p73QL1cEeqCU9pJ6xA93A" name="HITTED_CELL" visibility="public" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_5p73Qb1cEeqCU9pJ6xA93A" value="O"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5p9FYL1cEeqCU9pJ6xA93A" name="MISSED_CELL" visibility="public" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_5p9FYb1cEeqCU9pJ6xA93A" value=" "/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5p-TgL1cEeqCU9pJ6xA93A" name="cell" visibility="private">
+            <ownedComment xmi:id="_5p-6kL1cEeqCU9pJ6xA93A">
+              <body>/** 
+ * ~ = water, X = Killed cell, O = Missed shot, P1 = PatrolBoat with id == 1
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5p_hoL1cEeqCU9pJ6xA93A" name="x" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5qAvwL1cEeqCU9pJ6xA93A" name="y" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5qB94L1cEeqCU9pJ6xA93A" name="shield" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_5qDMAL1cEeqCU9pJ6xA93A" name="equals" visibility="public">
+            <ownedParameter xmi:id="_5qDMAb1cEeqCU9pJ6xA93A" name="str">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_5qDMAr1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qDzEL1cEeqCU9pJ6xA93A" name="get" visibility="public">
+            <ownedParameter xmi:id="_5qDzEb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qEaIL1cEeqCU9pJ6xA93A" name="set" visibility="public">
+            <ownedParameter xmi:id="_5qEaIb1cEeqCU9pJ6xA93A" name="cell">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qFBML1cEeqCU9pJ6xA93A" name="getX" visibility="public">
+            <ownedParameter xmi:id="_5qFBMb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qGPUL1cEeqCU9pJ6xA93A" name="getY" visibility="public">
+            <ownedParameter xmi:id="_5qGPUb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qG2YL1cEeqCU9pJ6xA93A" name="getPos" visibility="public">
+            <ownedParameter xmi:id="_5qG2Yb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qIEgL1cEeqCU9pJ6xA93A" name="setPos" visibility="public">
+            <ownedParameter xmi:id="_5qIEgb1cEeqCU9pJ6xA93A" name="pos">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5qIEgr1cEeqCU9pJ6xA93A" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5qIEg71cEeqCU9pJ6xA93A"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qIrkL1cEeqCU9pJ6xA93A" name="setY" visibility="public">
+            <ownedParameter xmi:id="_5qIrkb1cEeqCU9pJ6xA93A" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qJ5sL1cEeqCU9pJ6xA93A" name="setX" visibility="public">
+            <ownedParameter xmi:id="_5qJ5sb1cEeqCU9pJ6xA93A" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qKgwL1cEeqCU9pJ6xA93A" name="toString" visibility="public">
+            <ownedParameter xmi:id="_5qKgwb1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qLu4L1cEeqCU9pJ6xA93A" name="isShield" visibility="public">
+            <ownedParameter xmi:id="_5qLu4b1cEeqCU9pJ6xA93A" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5qMV8L1cEeqCU9pJ6xA93A" name="setShield" visibility="public">
+            <ownedParameter xmi:id="_5qMV8b1cEeqCU9pJ6xA93A" name="shield">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5VxlIL1cEeqCU9pJ6xA93A" name="Destroyer">
+          <generalization xmi:id="_5qM9AL1cEeqCU9pJ6xA93A" general="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedAttribute xmi:id="_5qNkEL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5qNkEb1cEeqCU9pJ6xA93A"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5V1PgL1cEeqCU9pJ6xA93A" name="Submarine">
+          <generalization xmi:id="_5qOLIL1cEeqCU9pJ6xA93A" general="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedAttribute xmi:id="_5qOLIb1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5qOyML1cEeqCU9pJ6xA93A"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5V3rwL1cEeqCU9pJ6xA93A" name="Battleship">
+          <generalization xmi:id="_5qOyMb1cEeqCU9pJ6xA93A" general="_5VXVcL1cEeqCU9pJ6xA93A"/>
+          <ownedAttribute xmi:id="_5qPZQL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suFhL1cEeqCU9pJ6xA93A" memberEnd="_5kNpwL1cEeqCU9pJ6xA93A _5suFhb1cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5suFhb1cEeqCU9pJ6xA93A" name="Board" type="_5UfywL1cEeqCU9pJ6xA93A" association="_5suFhL1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suFhr1cEeqCU9pJ6xA93A" memberEnd="_5kUXcL1cEeqCU9pJ6xA93A _5suFh71cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5suFh71cEeqCU9pJ6xA93A" name="Board" type="_5UfywL1cEeqCU9pJ6xA93A" association="_5suFhr1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suskL1cEeqCU9pJ6xA93A" memberEnd="_5mY0AL1cEeqCU9pJ6xA93A _5suskb1cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5suskb1cEeqCU9pJ6xA93A" name="Computer" type="_5UzUwL1cEeqCU9pJ6xA93A" association="_5suskL1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suskr1cEeqCU9pJ6xA93A" memberEnd="_5nAfEL1cEeqCU9pJ6xA93A _5susk71cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5susk71cEeqCU9pJ6xA93A" name="Player" type="_5U2YEL1cEeqCU9pJ6xA93A" association="_5suskr1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suslL1cEeqCU9pJ6xA93A" memberEnd="_5nDiYL1cEeqCU9pJ6xA93A _5suslb1cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5suslb1cEeqCU9pJ6xA93A" name="Player" type="_5U2YEL1cEeqCU9pJ6xA93A" association="_5suslL1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5suslr1cEeqCU9pJ6xA93A" memberEnd="_5nGlsL1cEeqCU9pJ6xA93A _5susl71cEeqCU9pJ6xA93A">
+        <ownedEnd xmi:id="_5susl71cEeqCU9pJ6xA93A" name="Player" type="_5U2YEL1cEeqCU9pJ6xA93A" association="_5suslr1cEeqCU9pJ6xA93A"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5V4S0L1cEeqCU9pJ6xA93A" name="observer">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_5V454L1cEeqCU9pJ6xA93A" name="ISubject">
+        <ownedComment xmi:id="_5V5g8L1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * The interface for the Subject object
+ */
+</body>
+        </ownedComment>
+        <ownedOperation xmi:id="_5qQAUL1cEeqCU9pJ6xA93A" name="registerObserver" visibility="public">
+          <ownedParameter xmi:id="_5qQAUb1cEeqCU9pJ6xA93A" name="observer" type="_5V5g8b1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5qQAUr1cEeqCU9pJ6xA93A" name="unregisterObserver" visibility="public">
+          <ownedParameter xmi:id="_5qQAU71cEeqCU9pJ6xA93A" name="observer" type="_5V5g8b1cEeqCU9pJ6xA93A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5qQnYL1cEeqCU9pJ6xA93A" name="notifyObserver" visibility="public">
+          <ownedParameter xmi:id="_5qQnYb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5qQnYr1cEeqCU9pJ6xA93A" name="points">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_5V5g8b1cEeqCU9pJ6xA93A" name="IObserver">
+        <ownedComment xmi:id="_5V6IAL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * The interface for the observer object 
+ */
+</body>
+        </ownedComment>
+        <ownedOperation xmi:id="_5qQnY71cEeqCU9pJ6xA93A" name="update" visibility="public">
+          <ownedParameter xmi:id="_5qQnZL1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+          <ownedParameter xmi:id="_5qQnZb1cEeqCU9pJ6xA93A" name="points">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5V6vEL1cEeqCU9pJ6xA93A" name="utils">
+    <packagedElement xmi:type="uml:Class" xmi:id="_5V8kQL1cEeqCU9pJ6xA93A" name="Host">
+      <ownedComment xmi:id="_5V9yYL1cEeqCU9pJ6xA93A">
+        <body>/** 
+ * Used to store the host. Used in  {@link LobbyScreen} to store all availablehosts in a list.
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_5qR1gL1cEeqCU9pJ6xA93A" name="id" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5qSckL1cEeqCU9pJ6xA93A" name="size" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5qTqsL1cEeqCU9pJ6xA93A" name="socket" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5qU40L1cEeqCU9pJ6xA93A" name="getId" visibility="public">
+        <ownedParameter xmi:id="_5qU40b1cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qVf4L1cEeqCU9pJ6xA93A" name="getSize" visibility="public">
+        <ownedParameter xmi:id="_5qVf4b1cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qWG8L1cEeqCU9pJ6xA93A" name="getSocket" visibility="public">
+        <ownedParameter xmi:id="_5qWG8b1cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5WA1sL1cEeqCU9pJ6xA93A" name="GenerationControl">
+      <ownedAttribute xmi:id="_5qXVEL1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_5qXVEb1cEeqCU9pJ6xA93A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5qYjML1cEeqCU9pJ6xA93A" name="possibles" visibility="private" type="_5qX8IL1cEeqCU9pJ6xA93A"/>
+      <ownedAttribute xmi:id="_5qZxUL1cEeqCU9pJ6xA93A" name="boardSize" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5qaYYL1cEeqCU9pJ6xA93A" name="removeFromPossibles" visibility="public">
+        <ownedComment xmi:id="_5qa_cL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * @param pos
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_5qaYYb1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qa_cb1cEeqCU9pJ6xA93A" name="isNotInPossibles" visibility="public">
+        <ownedParameter xmi:id="_5qa_cr1cEeqCU9pJ6xA93A" name="pos" type="_5WLNwL1cEeqCU9pJ6xA93A"/>
+        <ownedParameter xmi:id="_5qa_c71cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qbmgL1cEeqCU9pJ6xA93A" name="getSize" visibility="public">
+        <ownedParameter xmi:id="_5qbmgb1cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qcNkL1cEeqCU9pJ6xA93A" name="getPossibles" visibility="public">
+        <ownedParameter xmi:id="_5qcNkb1cEeqCU9pJ6xA93A" name="return" type="_5ZeZYr1cEeqCU9pJ6xA93A" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qc0oL1cEeqCU9pJ6xA93A" name="getBoardSize" visibility="public">
+        <ownedParameter xmi:id="_5qc0ob1cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5WLNwL1cEeqCU9pJ6xA93A" name="Pair">
+      <ownedComment xmi:id="_5WNqAL1cEeqCU9pJ6xA93A">
+        <body>/** 
+ * Generic data container used in the game.
+ * @param &lt; T1 >
+ * @param &lt; T2 >
+ */
+</body>
+      </ownedComment>
+      <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_5WLNwb1cEeqCU9pJ6xA93A" parameter="_5WLNwr1cEeqCU9pJ6xA93A _5WLNxL1cEeqCU9pJ6xA93A">
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_5WLNwr1cEeqCU9pJ6xA93A" parameteredElement="_5WLNw71cEeqCU9pJ6xA93A">
+          <ownedParameteredElement xmi:type="uml:Class" xmi:id="_5WLNw71cEeqCU9pJ6xA93A" name="T1" templateParameter="_5WLNwr1cEeqCU9pJ6xA93A"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_5WLNxL1cEeqCU9pJ6xA93A" parameteredElement="_5WLNxb1cEeqCU9pJ6xA93A">
+          <ownedParameteredElement xmi:type="uml:Class" xmi:id="_5WLNxb1cEeqCU9pJ6xA93A" name="T2" templateParameter="_5WLNxL1cEeqCU9pJ6xA93A"/>
+        </ownedParameter>
+      </ownedTemplateSignature>
+      <ownedAttribute xmi:id="_5qep0L1cEeqCU9pJ6xA93A" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5qf38L1cEeqCU9pJ6xA93A" name="_first" visibility="private" type="_5WLNw71cEeqCU9pJ6xA93A"/>
+      <ownedAttribute xmi:id="_5qhGEL1cEeqCU9pJ6xA93A" name="_second" visibility="private" type="_5WLNxb1cEeqCU9pJ6xA93A"/>
+      <ownedOperation xmi:id="_5qhtIL1cEeqCU9pJ6xA93A" name="getFirst" visibility="public">
+        <ownedComment xmi:id="_5qiUML1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * @return _first
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_5qhtIb1cEeqCU9pJ6xA93A" name="return" type="_5WLNw71cEeqCU9pJ6xA93A" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qi7QL1cEeqCU9pJ6xA93A" name="getSecond" visibility="public">
+        <ownedComment xmi:id="_5qjiUL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * @return _second
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_5qi7Qb1cEeqCU9pJ6xA93A" name="return" type="_5WLNxb1cEeqCU9pJ6xA93A" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qjiUb1cEeqCU9pJ6xA93A" name="toString" visibility="public">
+        <ownedParameter xmi:id="_5qjiUr1cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qkJYL1cEeqCU9pJ6xA93A" name="setFirst" visibility="public">
+        <ownedComment xmi:id="_5qkwcL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * @param first
+ * @return _first
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_5qkJYb1cEeqCU9pJ6xA93A" name="first" type="_5WLNw71cEeqCU9pJ6xA93A"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qlXgL1cEeqCU9pJ6xA93A" name="setSecond" visibility="public">
+        <ownedComment xmi:id="_5ql-kL1cEeqCU9pJ6xA93A">
+          <body>/** 
+ * @param second
+ * @return _second
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_5qlXgb1cEeqCU9pJ6xA93A" name="second" type="_5WLNxb1cEeqCU9pJ6xA93A"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qmloL1cEeqCU9pJ6xA93A" name="hashCode" visibility="public">
+        <ownedParameter xmi:id="_5qmlob1cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5qnzwb1cEeqCU9pJ6xA93A" name="equals" visibility="public">
+        <ownedParameter xmi:id="_5qnzwr1cEeqCU9pJ6xA93A" name="obj" type="_5qnzwL1cEeqCU9pJ6xA93A"/>
+        <ownedParameter xmi:id="_5qnzw71cEeqCU9pJ6xA93A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5ZZg4L1cEeqCU9pJ6xA93A" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_5ZZg4b1cEeqCU9pJ6xA93A" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZZg4r1cEeqCU9pJ6xA93A" name="BufferedReader"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZaH8L1cEeqCU9pJ6xA93A" name="BufferedWriter"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZaH8b1cEeqCU9pJ6xA93A" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZaH8r1cEeqCU9pJ6xA93A" name="InputStreamReader"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZaH871cEeqCU9pJ6xA93A" name="OutputStreamWriter"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZdLQL1cEeqCU9pJ6xA93A" name="File"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZdLQb1cEeqCU9pJ6xA93A" name="FileInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZdyUL1cEeqCU9pJ6xA93A" name="FileNotFoundException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZdyUb1cEeqCU9pJ6xA93A" name="FileOutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZdyUr1cEeqCU9pJ6xA93A" name="InputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZdyU71cEeqCU9pJ6xA93A" name="ObjectInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZeZYL1cEeqCU9pJ6xA93A" name="ObjectOutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZeZYb1cEeqCU9pJ6xA93A" name="OutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZgOkL1cEeqCU9pJ6xA93A" name="Serializable"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZhcsL1cEeqCU9pJ6xA93A" name="ByteArrayInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zhcsb1cEeqCU9pJ6xA93A" name="ByteArrayOutputStream"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5ZavAL1cEeqCU9pJ6xA93A" name="net">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZavAb1cEeqCU9pJ6xA93A" name="Socket"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zb9IL1cEeqCU9pJ6xA93A" name="ServerSocket"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zb9Ib1cEeqCU9pJ6xA93A" name="UnknownHostException"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5ZavAr1cEeqCU9pJ6xA93A" name="util">
+      <packagedElement xmi:type="uml:Package" xmi:id="_5ZavA71cEeqCU9pJ6xA93A" name="concurrent">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_5ZavBL1cEeqCU9pJ6xA93A" name="TimeUnit"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_5Zm8QL1cEeqCU9pJ6xA93A" name="ThreadLocalRandom"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZeZYr1cEeqCU9pJ6xA93A" name="List"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZiDwL1cEeqCU9pJ6xA93A" name="Base64"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZjR4L1cEeqCU9pJ6xA93A" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZjR4b1cEeqCU9pJ6xA93A" name="Scanner"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZpYgL1cEeqCU9pJ6xA93A" name="Map"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zp_kL1cEeqCU9pJ6xA93A" name="Collections"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zp_kb1cEeqCU9pJ6xA93A" name="HashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZqmoL1cEeqCU9pJ6xA93A" name="LinkedHashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zqmob1cEeqCU9pJ6xA93A" name="Set"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5Zb9Ir1cEeqCU9pJ6xA93A" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_5ZckML1cEeqCU9pJ6xA93A" name="json">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZckMb1cEeqCU9pJ6xA93A" name="JSONException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZckMr1cEeqCU9pJ6xA93A" name="JSONObject"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Ziq0L1cEeqCU9pJ6xA93A" name="JSONTokener"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zj48L1cEeqCU9pJ6xA93A" name="JSONArray"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5ZuRAL1cEeqCU9pJ6xA93A" name="*"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5ZuRAb1cEeqCU9pJ6xA93A" name="gui">
+    <packagedElement xmi:type="uml:Package" xmi:id="_5ZuRAr1cEeqCU9pJ6xA93A" name="screens">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5Zu4EL1cEeqCU9pJ6xA93A" name="LobbyScreen"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5iDGkL1cEeqCU9pJ6xA93A" name="Thread">
+    <packagedElement xmi:type="uml:DataType" xmi:id="_5iDGkb1cEeqCU9pJ6xA93A" name="UncaughtExceptionHandler"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5iUzYL1cEeqCU9pJ6xA93A" name="GameState"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5khy0L1cEeqCU9pJ6xA93A" name="List&lt;IObserver>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5mVwsL1cEeqCU9pJ6xA93A" name="Pair&lt;Integer,Integer>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5oHSUL1cEeqCU9pJ6xA93A" name="Map&lt;Pair&lt;Integer,Integer>,Cell>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5o9m4L1cEeqCU9pJ6xA93A" name="HashMap&lt;String,Ship>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5qX8IL1cEeqCU9pJ6xA93A" name="List&lt;Pair&lt;Integer,Integer>>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5qnzwL1cEeqCU9pJ6xA93A" name="Object"/>
+</uml:Model>

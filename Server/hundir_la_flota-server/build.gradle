@@ -1,0 +1,79 @@
+
+
+
+
+
+
+
+
+apply plugin: "eclipse"
+apply plugin:'java'
+version = '0.0.0.0.reallyEarly'
+ext {
+	appName = "hundir_la-server_flota"
+}
+eclipse.project.name = appName + "-server"
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://jitpack.io" }
+        jcenter()
+        google()
+    }
+    dependencies {
+    }
+}
+
+
+repositories {
+ 	mavenLocal()
+    mavenCentral()
+    jcenter()
+    google()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+	maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    // JUnit 5 libs
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.0-M1'
+        
+    // JSON libs    
+	compile 'org.json:json:20171018'
+	
+	// just in case
+    compile fileTree(dir: '../libs', include: '*.jar')
+	compile fileTree(dir: 'libs', include: '*.jar')
+    
+    
+    // JUnit 5 tests
+
+}
+
+	test {
+	    testLogging {
+	        events "passed", "skipped", "failed"
+	   }
+	   
+	sourceSets {
+   		main {
+        	java {
+         		srcDir 'src'
+      		}
+   		}
+   		
+   		test {
+      		java {
+         		 srcDirs = ["test"]  
+      		}
+   		}
+	}
+
+
+
+}

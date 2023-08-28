@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_7WphULnmEeqwyaPF8kWjyg" name="Strategy Pattern">
+  <elementImport xmi:id="_7gXeALnmEeqwyaPF8kWjyg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_7gZTMLnmEeqwyaPF8kWjyg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_7XU2wLnmEeqwyaPF8kWjyg" name="simulator">
+    <packagedElement xmi:type="uml:Package" xmi:id="_7XWr8LnmEeqwyaPF8kWjyg" name="model">
+      <packagedElement xmi:type="uml:Package" xmi:id="_7XZvQLnmEeqwyaPF8kWjyg" name="strategies">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_7Z6QsLnmEeqwyaPF8kWjyg" name="IComputerAttackStrategy">
+          <ownedComment xmi:id="_7a4hELnmEeqwyaPF8kWjyg">
+            <body>/** 
+ * Interface for IA attacks
+ */
+</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_7fsvoLnmEeqwyaPF8kWjyg" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedParameter xmi:id="_7fsvobnmEeqwyaPF8kWjyg" name="computer" type="_7e9Iw7nmEeqwyaPF8kWjyg"/>
+            <ownedParameter xmi:id="_7fsvornmEeqwyaPF8kWjyg" name="return" type="_7e9IxbnmEeqwyaPF8kWjyg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_7fsvo7nmEeqwyaPF8kWjyg" name="hunt" visibility="public">
+            <ownedParameter xmi:id="_7fsvpLnmEeqwyaPF8kWjyg" name="computer" type="_7e9Iw7nmEeqwyaPF8kWjyg"/>
+            <ownedParameter xmi:id="_7fsvpbnmEeqwyaPF8kWjyg" name="return" type="_7e9IxbnmEeqwyaPF8kWjyg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_7gYFELnmEeqwyaPF8kWjyg" name="attack" visibility="public">
+            <ownedParameter xmi:id="_7gYFEbnmEeqwyaPF8kWjyg" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_7gYFErnmEeqwyaPF8kWjyg" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_7gYFE7nmEeqwyaPF8kWjyg" name="return" type="_7e9IxbnmEeqwyaPF8kWjyg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_7gYsILnmEeqwyaPF8kWjyg" name="target" visibility="public">
+            <ownedParameter xmi:id="_7gYsIbnmEeqwyaPF8kWjyg" name="pair" type="_7e9IxbnmEeqwyaPF8kWjyg"/>
+            <ownedParameter xmi:id="_7gYsIrnmEeqwyaPF8kWjyg" name="computer" type="_7e9Iw7nmEeqwyaPF8kWjyg"/>
+            <ownedParameter xmi:id="_7gYsI7nmEeqwyaPF8kWjyg" name="return" type="_7e9IxbnmEeqwyaPF8kWjyg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_7a_10LnmEeqwyaPF8kWjyg" name="EasyComputerAttackStrategy" clientDependency="_7gYsJLnmEeqwyaPF8kWjyg">
+          <ownedComment xmi:id="_7bDgMLnmEeqwyaPF8kWjyg">
+            <body>/** 
+ * Easy computer strategy
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_7gbIYLnmEeqwyaPF8kWjyg" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_7gbIYbnmEeqwyaPF8kWjyg"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_7gfZ0LnmEeqwyaPF8kWjyg" name="boardSize" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_7gYsJLnmEeqwyaPF8kWjyg" name="IComputerAttackStrategy" supplier="_7Z6QsLnmEeqwyaPF8kWjyg" client="_7a_10LnmEeqwyaPF8kWjyg" contract="_7Z6QsLnmEeqwyaPF8kWjyg"/>
+          <ownedOperation xmi:id="_7gidILnmEeqwyaPF8kWjyg" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedParameter xmi:id="_7gidIbnmEeqwyaPF8kWjyg" name="computer" type="_7e9Iw7nmEeqwyaPF8kWjyg"/>
+            <ownedParameter xmi:id="_7gidIrnmEeqwyaPF8kWjyg" name="return" type="_7e9IxbnmEeqwyaPF8kWjyg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_7bIYsLnmEeqwyaPF8kWjyg" name="HardComputerAttackStrategy" clientDependency="_7gjEMLnmEeqwyaPF8kWjyg">
+          <ownedComment xmi:id="_7bLcALnmEeqwyaPF8kWjyg">
+            <body>/** 
+ * Hard computer strategy
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_7gk5YLnmEeqwyaPF8kWjyg" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_7gk5YbnmEeqwyaPF8kWjyg"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_7gnVoLnmEeqwyaPF8kWjyg" name="boardSize" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_7gjEMLnmEeqwyaPF8kWjyg" name="IComputerAttackStrategy" supplier="_7Z6QsLnmEeqwyaPF8kWjyg" client="_7bIYsLnmEeqwyaPF8kWjyg" contract="_7Z6QsLnmEeqwyaPF8kWjyg"/>
+          <ownedOperation xmi:id="_7gpK0LnmEeqwyaPF8kWjyg" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedParameter xmi:id="_7gpK0bnmEeqwyaPF8kWjyg" name="computer" type="_7e9Iw7nmEeqwyaPF8kWjyg"/>
+            <ownedParameter xmi:id="_7gpK0rnmEeqwyaPF8kWjyg" name="return" type="_7e9IxbnmEeqwyaPF8kWjyg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_7bPGYLnmEeqwyaPF8kWjyg" name="NormalComputerAttackStrategy" clientDependency="_7gqY8LnmEeqwyaPF8kWjyg">
+          <ownedComment xmi:id="_7bQ7kLnmEeqwyaPF8kWjyg">
+            <body>/** 
+ * Normal computer strategy: &lt;br> The way the NormalComputerAttackStrategy works is the following: &lt;br> + It will attack randomly searching for a target and will do this until it has hit a target. &lt;br> + When a target has been hit it will go into Target mode. In this mode the computer will attack to the cells adjacent to the target hit where unless a patrolBoat is hit the number of hits will always be at least > 1 &lt;br> + After all the adjacent cells have been shot we will return to hunt mode and the process is repeated
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_7gsOILnmEeqwyaPF8kWjyg" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_7gvRcLnmEeqwyaPF8kWjyg" name="boardSize" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_7gqY8LnmEeqwyaPF8kWjyg" name="IComputerAttackStrategy" supplier="_7Z6QsLnmEeqwyaPF8kWjyg" client="_7bPGYLnmEeqwyaPF8kWjyg" contract="_7Z6QsLnmEeqwyaPF8kWjyg"/>
+          <ownedOperation xmi:id="_7gxGoLnmEeqwyaPF8kWjyg" name="computerAttackActionAlgorithm" visibility="public">
+            <ownedComment xmi:id="_7gyUwLnmEeqwyaPF8kWjyg">
+              <body>/** 
+ * @param computer Bot player
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_7gxGobnmEeqwyaPF8kWjyg" name="computer" type="_7e9Iw7nmEeqwyaPF8kWjyg"/>
+            <ownedParameter xmi:id="_7gxGornmEeqwyaPF8kWjyg" name="return" type="_7e9IxbnmEeqwyaPF8kWjyg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_7e9Iw7nmEeqwyaPF8kWjyg" name="Computer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_7e9v0rnmEeqwyaPF8kWjyg" name="controller">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_7e9v07nmEeqwyaPF8kWjyg" name="LocalController"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_7e8hsLnmEeqwyaPF8kWjyg" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_7e9IwLnmEeqwyaPF8kWjyg" name="util">
+      <packagedElement xmi:type="uml:Package" xmi:id="_7e9IwbnmEeqwyaPF8kWjyg" name="concurrent">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_7e9IwrnmEeqwyaPF8kWjyg" name="ThreadLocalRandom"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_7e9v0LnmEeqwyaPF8kWjyg" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_7e9v0bnmEeqwyaPF8kWjyg" name="Serializable"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_7e9IxLnmEeqwyaPF8kWjyg" name="utils">
+    <packagedElement xmi:type="uml:DataType" xmi:id="_7e9IxbnmEeqwyaPF8kWjyg" name="Pair"/>
+  </packagedElement>
+</uml:Model>

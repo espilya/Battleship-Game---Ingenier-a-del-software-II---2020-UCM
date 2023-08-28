@@ -1,0 +1,61 @@
+
+//java version
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+apply plugin: "java-library"
+//apply plugin: 'java'
+//apply plugin: 'eclipse'
+//apply plugin: 'application'
+
+eclipse.project.name = appName + "-core"
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+	// all dependencies are in the main (Client) build.gralde
+    //testImplementation('org.junit.jupiter:junit-jupiter:5.6.2')
+    //compile 'org.json:json:20171018'
+        
+  //  testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.0-M1'
+    
+    // tween engine libs
+    //compile 'com.github.arcnor:universal-tween-engine:6.3.4'
+	//compile 'com.github.arcnor:universal-tween-engine:6.3.4:sources'
+	
+	// just in case
+	//compile fileTree(dir: 'libs', include: '*.jar')
+}
+
+//test {
+   // useJUnitPlatform()
+//    testLogging {
+//        events "passed", "skipped", "failed"
+//    }
+//}
+
+sourceSets {
+   main {
+      java {
+         srcDir 'src'
+      }
+   }
+    
+   test {
+      java {
+         srcDir 'test'
+      }
+   }
+}
+
+
+
+
+
+
+
+
+

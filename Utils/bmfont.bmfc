@@ -1,0 +1,64 @@
+# AngelCode Bitmap Font Generator configuration file
+fileVersion=1
+
+# font settings
+fontName=
+fontFile=Fonts/joystix monospace.ttf
+charSet=0
+fontSize=32
+aa=1
+scaleH=100
+useSmoothing=1
+isBold=0
+isItalic=0
+useUnicode=1
+disableBoxChars=1
+outputInvalidCharGlyph=0
+dontIncludeKerningPairs=0
+useHinting=1
+renderFromOutline=0
+useClearType=1
+autoFitNumPages=0
+autoFitFontSizeMin=0
+autoFitFontSizeMax=0
+
+# character alignment
+paddingDown=0
+paddingUp=0
+paddingRight=0
+paddingLeft=0
+spacingHoriz=1
+spacingVert=1
+useFixedHeight=0
+forceZero=0
+widthPaddingFactor=0.00
+
+# output file
+outWidth=256
+outHeight=256
+outBitDepth=8
+fontDescFormat=0
+fourChnlPacked=0
+textureFormat=tga
+textureCompression=0
+alphaChnl=1
+redChnl=0
+greenChnl=0
+blueChnl=0
+invA=0
+invR=0
+invG=0
+invB=0
+
+# outline
+outlineThickness=0
+
+# selected chars
+chars=32-34,38,40,44-51,53-54,56-59,68,70,73-74,76-77,79-80,82,84,86-89,97-105,107-112,114-117,120-121
+chars=160,168-169,188,194,200,202,204-206,210,212,216,224-226,240-242,244,249,254-687,700,712-713,724
+chars=732,751,756,768-770,780,798,802-803,820,868,968,992,1024-1027,1038,1054,1057,1089,1124,1134,1248
+chars=1280-1282,7424-7426,7429,7680-7682,7684,7693,7701,7710,7712,7714,7716,7718,7723,7729,7731,7735,7925
+chars=7936-7939,8192-8195,8221,8224-8225,8240,8312,8361,8453,8467,8471,8706,8734,8962,8993,9472,9474,64257
+chars=64258
+
+# imported icon images

@@ -1,0 +1,72 @@
+
+//java version
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+apply plugin: "java-library"
+//apply plugin: 'java'
+//apply plugin: 'eclipse'
+//apply plugin: "java-library"
+
+dependencies {
+	// all dependencies are in the main (Client) build.gralde
+    //testImplementation('org.junit.jupiter:junit-jupiter:5.6.2')
+    //compile 'org.json:json:20171018'
+        
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    //testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.7.0-M1'
+    
+    // tween engine libs
+    //compile 'com.github.arcnor:universal-tween-engine:6.3.4'
+	//compile 'com.github.arcnor:universal-tween-engine:6.3.4:sources'
+	
+	// just in case
+	//compile fileTree(dir: 'libs', include: '*.jar')
+        
+}
+
+test {
+   // useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+sourceSets.main.java.srcDirs = [ "src/" ]
+sourceSets.main.resources.srcDirs = ["../core/assets"]
+
+project.ext.mainClassName = "desktop.launcher.DesktopLauncher"
+project.ext.assetsDir = new File("../core/assets")
+
+task run(dependsOn: classes, type: JavaExec) {
+    main = project.mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    workingDir = project.assetsDir
+    ignoreExitValue = true
+}
+
+task debug(dependsOn: classes, type: JavaExec) {
+    main = project.mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    workingDir = project.assetsDir
+    ignoreExitValue = true
+    debug = true
+}
+
+task dist(type: Jar) {
+    manifest {
+        attributes 'Main-Class': project.mainClassName
+    }
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+}
+
+
+dist.dependsOn classes
+
+eclipse.project.name = appName + "-desktop"
