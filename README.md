@@ -1,4 +1,4 @@
-Our wiki: https://github.com/UCM-FDI-IS2-2020/proyecto-is2-grupo-10/wiki
+Our wiki: https://github.com/espilya/battleship-game/wiki
 
 Wiki about [BattleShip game](https://en.wikipedia.org/wiki/Battleship_(game))
 
